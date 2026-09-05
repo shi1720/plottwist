@@ -58,3 +58,7 @@ Inspected the home screen, quiz controls, and character result in the in-app bro
 - There is no scientific personality validation or relationship prediction.
 
 Hosted release status and CI are linked from the repository. Local results above remain distinguishable from hosted CI results.
+
+## Hosted release verification
+
+The [clean Linux GitHub Actions run](https://github.com/shi1720/plottwist/actions/runs/33969147148) passed the complete pipeline, including the production-Worker browser suite. The [public deployed app](https://plottwist.sg127977958.chatgpt.site) returned a successful health response and rendered without a sign-in gate in the browser. The initial registration URL redirects to the canonical deployed address.

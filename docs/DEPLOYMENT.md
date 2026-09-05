@@ -49,3 +49,9 @@ Redeploy the previous known-good saved artifact. Keep v1 content and decoding se
 Scoring is local for ordinary visitors. The optional API processes at most 8 KiB and 12 answers; computation is bounded by the fixed catalog. Cloudflare's runtime limits still apply. Rate limits, abuse controls, availability alerts, and a service-level objective are platform/operational work—not implied by a successful deployment.
 
 Vinext is beta. Keep React's server/client packages in lockstep, upgrade matching RSC/Vite/Cloudflare peers together, and rerun production-browser tests after upgrades. Avoid exposing development servers to the public internet.
+
+## Live release
+
+Public application: https://plottwist.sg127977958.chatgpt.site
+
+The hosting service returned this final canonical address at deployment. Use the deployed address rather than the initial registration preview URL.

@@ -6,7 +6,7 @@
 
 A personality sitcom for people who bring a spreadsheet to brunch—or cause the spreadsheet to exist.
 
-[Play Plot Twist](https://plottwist.hushed-zebra-2444.chatgpt.site) · [Meet the cast](https://plottwist.hushed-zebra-2444.chatgpt.site/cast) · [Architecture](docs/ARCHITECTURE.md) · [Engineering evaluations](evaluation/README.md)
+[Play Plot Twist](https://plottwist.sg127977958.chatgpt.site) · [Meet the cast](https://plottwist.sg127977958.chatgpt.site/cast) · [Architecture](docs/ARCHITECTURE.md) · [Engineering evaluations](evaluation/README.md)
 
 [![Quality](https://github.com/shi1720/plottwist/actions/workflows/ci.yml/badge.svg)](https://github.com/shi1720/plottwist/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)
