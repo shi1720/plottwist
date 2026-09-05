@@ -1,0 +1,14 @@
+{
+  "id": "versioned-sharing",
+  "version": 1,
+  "kind": "feature",
+  "language": "Python 3.9+",
+  "problem": "Implement decode(token) for frozen v1 aggregate-only result links. Accept exactly pilot, office, or friends and four signed odd integers from -9 to 9. Return version, packId, raw and four-bit code. All unsupported or malformed inputs must raise ValueError. Do not return answer history.",
+  "contract": "Maximum input length is 80. No whitespace, trailing newline, zero, even values, leading zero, or extra segments. Positive maps to 1; negative to 0.",
+  "entrypoint": "decode",
+  "timeout_seconds": 20,
+  "sha256": {
+    "baseline": "ffbf26cbba86ecbf8fb3bf936d2e6d1fe478f7fe0c77d6040621f5446d293b66",
+    "golden": "a7c4e1f19c95cd0683ffa60a0c0e5998f3a03a22649bc17649ee5bee9acd392a"
+  }
+}

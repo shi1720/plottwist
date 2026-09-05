@@ -1,0 +1,15 @@
+name: Bug report
+description: Help us reproduce a plot hole.
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include episode, browser, and expected vs actual behavior. Do not include private answers unless you want them public.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, console errors, or a minimal reproduction.

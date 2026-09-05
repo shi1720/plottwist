@@ -1,0 +1,14 @@
+{
+  "id": "answer-revision",
+  "version": 1,
+  "kind": "bug-fix",
+  "language": "Python 3.9+",
+  "problem": "Revising an existing answer appends a duplicate and makes resumed scoring fail. Replace in place, preserve first-seen ordering and deep-enough record isolation, and leave the caller input unchanged. Unknown scene IDs append once.",
+  "contract": "Answers are valid records with string sceneId and choiceId. No network or dependencies.",
+  "entrypoint": "revise",
+  "timeout_seconds": 20,
+  "sha256": {
+    "baseline": "cd37510c07f25d74be18b51a31fcfcf518480890fecc8d267d6ae73a31251a8f",
+    "golden": "2c6ca91a4d087b120b97114a81ad3ba0f10a85fcc352bc3e0ec3fc988634bc5a"
+  }
+}

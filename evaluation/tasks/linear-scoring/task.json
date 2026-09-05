@@ -1,0 +1,14 @@
+{
+  "id": "linear-scoring",
+  "version": 1,
+  "kind": "performance",
+  "language": "Python 3.9+",
+  "problem": "Replace per-answer scene scans with a single index. Preserve totals, empty input, and ValueError for duplicate scenes, unknown scenes, and foreign choices. Acceptance measures catalog visits instead of wall time.",
+  "contract": "Scene IDs are unique; valid weight vectors have four integers. At most four choices per scene. Target O(scenes + answers) scene visits and O(scenes) index memory.",
+  "entrypoint": "aggregate",
+  "timeout_seconds": 20,
+  "sha256": {
+    "baseline": "e6f6eeea874a6ef83e265caa1ede7e8059bc4413f4534e2ed96da715d8e1676b",
+    "golden": "b5784a28b8d4e24c4ef590e302ab52c36427dfa1018df44d3218685b4c8fc099"
+  }
+}

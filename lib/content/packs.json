@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "pilot",
+    "title": "The pilot episode",
+    "subtitle": "A perfectly normal identity crisis.",
+    "color": "peach",
+    "scenes": [
+      {
+        "id": "pilot-1",
+        "setting": "THE GROUP CHAT",
+        "title": "The group chat has been silent for six hours.",
+        "detail": "A rare moment of peace. Or a cry for help?",
+        "choices": [
+          {
+            "id": "pilot-1-1",
+            "text": "Enjoy the silence. Finally, a thought of my own.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "pilot-1-2",
+            "text": "Send one excellent meme to my favorite person.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-1-3",
+            "text": "Ask if anyone wants to grab food.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-1-4",
+            "text": "Start a poll for an unnecessarily ambitious group adventure.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-2",
+        "setting": "THE DINNER PARTY",
+        "title": "Your friend unveils a truly terrible haircut.",
+        "detail": "They ask, “Be honest. Do you love it?”",
+        "choices": [
+          {
+            "id": "pilot-2-2",
+            "text": "Ask how they feel about it first.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "pilot-2-3",
+            "text": "Gently suggest one small styling adjustment.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "pilot-2-4",
+            "text": "Give a clear, kind answer. They did ask.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "pilot-2-1",
+            "text": "Find the one genuinely lovely thing and lead with that.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-3",
+        "setting": "SATURDAY, 10:03 AM",
+        "title": "Your entire weekend just opened up.",
+        "detail": "No plans. No obligations. A suspicious amount of freedom.",
+        "choices": [
+          {
+            "id": "pilot-3-3",
+            "text": "Pick one thing and loosely plan around it.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "pilot-3-4",
+            "text": "Make a little itinerary. Freedom deserves structure.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "pilot-3-1",
+            "text": "Walk outside and see what happens.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "pilot-3-2",
+            "text": "Keep a few ideas. Commit to absolutely none.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-4",
+        "setting": "THE CORNER CAFÉ",
+        "title": "You inherit a tiny, slightly haunted café.",
+        "detail": "The coffee machine works. The business model does not.",
+        "choices": [
+          {
+            "id": "pilot-4-4",
+            "text": "Build an entire fictional universe around the resident ghost.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "pilot-4-1",
+            "text": "Fix the menu, clean the counter, serve good coffee.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "pilot-4-2",
+            "text": "Keep what people already love and make it better.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "pilot-4-3",
+            "text": "Imagine a café that turns into a cinema at night.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "pilot-5",
+        "setting": "THE HOUSE PARTY",
+        "title": "You know exactly one person at this party.",
+        "detail": "They have vanished into the kitchen. Naturally.",
+        "choices": [
+          {
+            "id": "pilot-5-1",
+            "text": "Find the balcony and a good view.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "pilot-5-2",
+            "text": "Have a real conversation with whoever is nearest.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-5-3",
+            "text": "Introduce myself to a small group.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-5-4",
+            "text": "Ask the room a question everyone has an opinion about.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-6",
+        "setting": "THE ADVICE HOTLINE",
+        "title": "A friend texts: “My day was a disaster.”",
+        "detail": "There is no punctuation after disaster. This is serious.",
+        "choices": [
+          {
+            "id": "pilot-6-2",
+            "text": "Ask if they want comfort or solutions.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "pilot-6-3",
+            "text": "Help separate what happened from what can change.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "pilot-6-4",
+            "text": "Work through a concrete plan for tomorrow.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "pilot-6-1",
+            "text": "Make them feel heard before anything else.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-7",
+        "setting": "THE SURPRISE TRIP",
+        "title": "You leave for a trip in two hours.",
+        "detail": "Your bag is empty. Your optimism is not.",
+        "choices": [
+          {
+            "id": "pilot-7-3",
+            "text": "Run through a short mental checklist.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "pilot-7-4",
+            "text": "Use the packing list I definitely already have.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "pilot-7-1",
+            "text": "Throw in the essentials. The rest is a local shopping opportunity.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "pilot-7-2",
+            "text": "Pack the obvious things and improvise the rest.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-8",
+        "setting": "THE FREE EVENING",
+        "title": "You can take one completely free class.",
+        "detail": "No certificate. No career move. Just curiosity.",
+        "choices": [
+          {
+            "id": "pilot-8-4",
+            "text": "Explore what cities might look like in 100 years.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "pilot-8-1",
+            "text": "Cook a meal I can make again tomorrow.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "pilot-8-2",
+            "text": "Learn how to fix something around the house.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "pilot-8-3",
+            "text": "Try experimental storytelling. See where it goes.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "pilot-9",
+        "setting": "THE GOOD NEWS",
+        "title": "Something excellent just happened.",
+        "detail": "You got the news. The music swells.",
+        "choices": [
+          {
+            "id": "pilot-9-1",
+            "text": "Sit with the feeling privately for a while.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "pilot-9-2",
+            "text": "Tell my closest person, in great detail.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-9-3",
+            "text": "Tell the group chat. Immediately.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "pilot-9-4",
+            "text": "Turn it into an impromptu celebration.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-10",
+        "setting": "THE ROOMMATE SUMMIT",
+        "title": "Your roommate keeps stealing your oat milk.",
+        "detail": "The carton has become a symbol.",
+        "choices": [
+          {
+            "id": "pilot-10-2",
+            "text": "Explain why the small gesture feels inconsiderate.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "pilot-10-3",
+            "text": "Agree on a straightforward replacement rule.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "pilot-10-4",
+            "text": "Split the grocery budget so the system solves it.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "pilot-10-1",
+            "text": "Check if something else is going on with them.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-11",
+        "setting": "THE PLOT TWIST",
+        "title": "The restaurant loses your reservation.",
+        "detail": "Eight hungry people look directly at you.",
+        "choices": [
+          {
+            "id": "pilot-11-3",
+            "text": "Call a nearby alternative before moving everyone.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "pilot-11-4",
+            "text": "Open the backup options I saved earlier.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "pilot-11-1",
+            "text": "Great. Time for a food adventure.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "pilot-11-2",
+            "text": "Wander until we find somewhere promising.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "pilot-12",
+        "setting": "THE CLOSING CREDITS",
+        "title": "How would you describe today?",
+        "detail": "One ordinary day. Several possible stories.",
+        "choices": [
+          {
+            "id": "pilot-12-4",
+            "text": "The beginning of something I cannot quite name yet.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "pilot-12-1",
+            "text": "The exact small moments that made it good.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "pilot-12-2",
+            "text": "What happened, and what I learned from it.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "pilot-12-3",
+            "text": "The unexpected connections it made me notice.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "office",
+    "title": "Out of office",
+    "subtitle": "Meetings that could have been a nap.",
+    "color": "lilac",
+    "scenes": [
+      {
+        "id": "office-1",
+        "setting": "MONDAY STANDUP",
+        "title": "The team call starts five minutes early.",
+        "detail": "Everyone is awkwardly looking at themselves.",
+        "choices": [
+          {
+            "id": "office-1-1",
+            "text": "Use the five minutes to gather my thoughts.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "office-1-2",
+            "text": "Say hello to the colleague I know best.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "office-1-3",
+            "text": "Ask what everyone got up to over the weekend.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "office-1-4",
+            "text": "Launch a completely unnecessary icebreaker.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-2",
+        "setting": "THE CODE REVIEW",
+        "title": "A teammate is attached to an idea that will not work.",
+        "detail": "The demo is tomorrow. The idea has a name.",
+        "choices": [
+          {
+            "id": "office-2-2",
+            "text": "Ask what matters most to them about it.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "office-2-3",
+            "text": "Compare the options against the actual requirements.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "office-2-4",
+            "text": "Show a small test that clearly demonstrates the issue.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "office-2-1",
+            "text": "Acknowledge the effort before discussing a change.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-3",
+        "setting": "THE BLANK CALENDAR",
+        "title": "Your afternoon meetings are canceled.",
+        "detail": "A tiny corporate miracle.",
+        "choices": [
+          {
+            "id": "office-3-3",
+            "text": "Choose the top two priorities and block time.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "office-3-4",
+            "text": "Reorganize the queue and execute the new plan.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "office-3-1",
+            "text": "Follow whichever interesting problem catches my eye.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "office-3-2",
+            "text": "Pick something useful and leave room to wander.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-4",
+        "setting": "THE HACK DAY",
+        "title": "You get one day to build anything.",
+        "detail": "No roadmap. Just a blank whiteboard.",
+        "choices": [
+          {
+            "id": "office-4-4",
+            "text": "Reimagine the entire product from a different starting point.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "office-4-1",
+            "text": "Fix the annoying thing everyone hits daily.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "office-4-2",
+            "text": "Make an existing workflow noticeably smoother.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "office-4-3",
+            "text": "Prototype an unusual feature people have not asked for yet.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "office-5",
+        "setting": "THE TEAM RETREAT",
+        "title": "You arrive at the offsite dinner.",
+        "detail": "Someone says “networking.” You feel something.",
+        "choices": [
+          {
+            "id": "office-5-1",
+            "text": "Find a quiet seat with a good exit strategy.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "office-5-2",
+            "text": "Have a long conversation with one person.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "office-5-3",
+            "text": "Move between a couple of groups.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "office-5-4",
+            "text": "Make sure every table knows every other table.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-6",
+        "setting": "THE MISSED DEADLINE",
+        "title": "A colleague misses a deadline you relied on.",
+        "detail": "The notification arrives with “sorry” three times.",
+        "choices": [
+          {
+            "id": "office-6-2",
+            "text": "Talk through the pressure they are under.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "office-6-3",
+            "text": "Figure out the impact and agree a realistic recovery.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "office-6-4",
+            "text": "Identify what failed in the process and fix the dependency.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "office-6-1",
+            "text": "Check whether they are okay first.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-7",
+        "setting": "THE LAUNCH",
+        "title": "A launch is moved forward by a week.",
+        "detail": "The countdown suddenly has teeth.",
+        "choices": [
+          {
+            "id": "office-7-3",
+            "text": "Cut scope and put the essentials in order.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "office-7-4",
+            "text": "Map dependencies, owners, and the critical path.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "office-7-1",
+            "text": "Start moving and adapt as the details emerge.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "office-7-2",
+            "text": "Identify a starting point and adjust daily.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-8",
+        "setting": "THE CUSTOMER CALL",
+        "title": "A customer describes a weird workaround.",
+        "detail": "It involves three tabs and a sticky note.",
+        "choices": [
+          {
+            "id": "office-8-4",
+            "text": "Sketch an entirely new way to solve the underlying problem.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "office-8-1",
+            "text": "Solve the exact friction they showed us.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "office-8-2",
+            "text": "Improve the workflow for similar customers.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "office-8-3",
+            "text": "Wonder what hidden need created that behavior.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "office-9",
+        "setting": "THE DEMO",
+        "title": "You built something you are proud of.",
+        "detail": "There is one slot left in the company demo.",
+        "choices": [
+          {
+            "id": "office-9-1",
+            "text": "Write it up so people can explore at their own pace.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "office-9-2",
+            "text": "Show my immediate team first.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "office-9-3",
+            "text": "Volunteer for a short walkthrough.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "office-9-4",
+            "text": "Take the stage and make it an event.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-10",
+        "setting": "THE PRIORITY FIGHT",
+        "title": "Two teams both need your help first.",
+        "detail": "Both messages are marked urgent. Of course.",
+        "choices": [
+          {
+            "id": "office-10-2",
+            "text": "Talk to both leads and understand their worries.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "office-10-3",
+            "text": "Compare the consequences of each delay.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "office-10-4",
+            "text": "Use impact and effort to make the tradeoff explicit.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "office-10-1",
+            "text": "Start with the team feeling most unsupported.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-11",
+        "setting": "THE MEETING",
+        "title": "Someone says “let’s just brainstorm.”",
+        "detail": "No agenda. No end time. A dangerous sentence.",
+        "choices": [
+          {
+            "id": "office-11-3",
+            "text": "Agree a question and a time limit first.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "office-11-4",
+            "text": "Define the outcome, constraints, and decision process.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "office-11-1",
+            "text": "Excellent. Let the ideas collide.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "office-11-2",
+            "text": "Start talking and discover the shape as we go.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "office-12",
+        "setting": "THE FRIDAY RECAP",
+        "title": "What makes a week feel worthwhile?",
+        "detail": "The laptop is closing. Finally.",
+        "choices": [
+          {
+            "id": "office-12-4",
+            "text": "The sense we are building toward something transformative.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "office-12-1",
+            "text": "Useful work that made someone’s day easier.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "office-12-2",
+            "text": "A concrete improvement I can point to.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "office-12-3",
+            "text": "A discovery that opened up a new direction.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "friends",
+    "title": "The group chat",
+    "subtitle": "Your people. All their glorious nonsense.",
+    "color": "green",
+    "scenes": [
+      {
+        "id": "friends-1",
+        "setting": "THE VOICE NOTE",
+        "title": "Someone sends a seven-minute voice note.",
+        "detail": "The transcript alone could be a novella.",
+        "choices": [
+          {
+            "id": "friends-1-1",
+            "text": "Listen quietly and think before replying.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "friends-1-2",
+            "text": "Send a short, thoughtful answer just to them.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "friends-1-3",
+            "text": "Reply with a voice note of my own.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "friends-1-4",
+            "text": "Call them. We are making this a live episode.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-2",
+        "setting": "THE CRUSH",
+        "title": "Your friend wants to text their ex.",
+        "detail": "The draft already has three paragraphs.",
+        "choices": [
+          {
+            "id": "friends-2-2",
+            "text": "Help them feel less alone before deciding anything.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "friends-2-3",
+            "text": "Talk through what is likely to happen if they send it.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "friends-2-4",
+            "text": "Suggest saving the draft and reviewing it tomorrow.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "friends-2-1",
+            "text": "Ask what feeling they hope the message will resolve.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-3",
+        "setting": "THE TRIP POLL",
+        "title": "The group wants a weekend away.",
+        "detail": "The chat has 94 messages and zero decisions.",
+        "choices": [
+          {
+            "id": "friends-3-3",
+            "text": "Narrow it to two dates and two places.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "friends-3-4",
+            "text": "Create a poll, a budget, and a booking deadline.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "friends-3-1",
+            "text": "I will show up wherever we end up.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "friends-3-2",
+            "text": "Suggest a rough direction and keep it flexible.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-4",
+        "setting": "THE BIRTHDAY",
+        "title": "You are picking a birthday gift.",
+        "detail": "They insist they do not need anything. Suspicious.",
+        "choices": [
+          {
+            "id": "friends-4-4",
+            "text": "Create a whole experience around their imaginary dream life.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "friends-4-1",
+            "text": "Get the useful thing they keep borrowing.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "friends-4-2",
+            "text": "Upgrade something they use every day.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "friends-4-3",
+            "text": "Find something that references a private running joke.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "friends-5",
+        "setting": "THE CANCELED PLAN",
+        "title": "Friday plans get canceled at the last minute.",
+        "detail": "The outfit is already on.",
+        "choices": [
+          {
+            "id": "friends-5-1",
+            "text": "Change immediately. This is a gift.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "friends-5-2",
+            "text": "See if one friend wants something quieter.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "friends-5-3",
+            "text": "Message another group and salvage the night.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "friends-5-4",
+            "text": "Invite people over. The event is now here.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-6",
+        "setting": "THE ARGUMENT",
+        "title": "Two friends disagree and ask you to pick a side.",
+        "detail": "You were just trying to eat your chips.",
+        "choices": [
+          {
+            "id": "friends-6-2",
+            "text": "Look for what each person needs underneath the argument.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "friends-6-3",
+            "text": "Separate the facts from the assumptions.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "friends-6-4",
+            "text": "Evaluate each claim fairly, even if it is awkward.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "friends-6-1",
+            "text": "Make sure both feel genuinely listened to.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-7",
+        "setting": "THE UNPLANNED GUEST",
+        "title": "A friend arrives with three extra people.",
+        "detail": "Your dinner for four has developed ambitions.",
+        "choices": [
+          {
+            "id": "friends-7-3",
+            "text": "Rework portions and seating before we start.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "friends-7-4",
+            "text": "Quickly coordinate food, seats, and who brings what.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "friends-7-1",
+            "text": "Excellent. This just became a potluck.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "friends-7-2",
+            "text": "Order something extra and squeeze everyone in.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-8",
+        "setting": "THE WALK",
+        "title": "A long walk turns into a long conversation.",
+        "detail": "No destination. Just very comfortable shoes.",
+        "choices": [
+          {
+            "id": "friends-8-4",
+            "text": "Invent the wildly different lives we could have lived.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "friends-8-1",
+            "text": "Swap actual stories from our week.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "friends-8-2",
+            "text": "Notice the neighborhood and what is changing.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "friends-8-3",
+            "text": "Explore a strange idea neither of us can stop thinking about.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      },
+      {
+        "id": "friends-9",
+        "setting": "THE NEW FRIEND",
+        "title": "A friend brings someone new to the group.",
+        "detail": "They seem lovely. And a little overwhelmed.",
+        "choices": [
+          {
+            "id": "friends-9-1",
+            "text": "Give them room to settle in.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [-3, 0, 0, 0]
+          },
+          {
+            "id": "friends-9-2",
+            "text": "Ask one easy question and really listen.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [-1, 0, 0, 0]
+          },
+          {
+            "id": "friends-9-3",
+            "text": "Introduce them to people with shared interests.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [1, 0, 0, 0]
+          },
+          {
+            "id": "friends-9-4",
+            "text": "Pull them straight into the fun.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [3, 0, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-10",
+        "setting": "THE HONEST OPINION",
+        "title": "Your friend asks whether to quit their job.",
+        "detail": "They are tired. You care. The rent still exists.",
+        "choices": [
+          {
+            "id": "friends-10-2",
+            "text": "Ask what a better day would actually feel like.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, -1, 0, 0]
+          },
+          {
+            "id": "friends-10-3",
+            "text": "Compare options, savings, and realistic timelines.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 1, 0, 0]
+          },
+          {
+            "id": "friends-10-4",
+            "text": "Build a decision framework with the key tradeoffs.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 3, 0, 0]
+          },
+          {
+            "id": "friends-10-1",
+            "text": "Explore what the job is doing to their wellbeing.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, -3, 0, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-11",
+        "setting": "THE GAME NIGHT",
+        "title": "Nobody understands the board game rules.",
+        "detail": "The instruction booklet is longer than a lease.",
+        "choices": [
+          {
+            "id": "friends-11-3",
+            "text": "Read the basics and try a practice round.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 1, 0]
+          },
+          {
+            "id": "friends-11-4",
+            "text": "Understand the rules first so everyone has a fair game.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 3, 0]
+          },
+          {
+            "id": "friends-11-1",
+            "text": "Make up a version and start playing.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, -3, 0]
+          },
+          {
+            "id": "friends-11-2",
+            "text": "Learn as we go. A little confusion is the fun.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, -1, 0]
+          }
+        ]
+      },
+      {
+        "id": "friends-12",
+        "setting": "THE FRIENDSHIP",
+        "title": "What is your favorite part of an old friendship?",
+        "detail": "The years have added lore. So much lore.",
+        "choices": [
+          {
+            "id": "friends-12-4",
+            "text": "All the futures we can still imagine together.",
+            "reaction": "Bold of you. Excellent television.",
+            "weights": [0, 0, 0, 3]
+          },
+          {
+            "id": "friends-12-1",
+            "text": "The familiar little rituals that still feel right.",
+            "reaction": "A quiet plot twist. We respect it.",
+            "weights": [0, 0, 0, -3]
+          },
+          {
+            "id": "friends-12-2",
+            "text": "Having someone who knows what my real life looks like.",
+            "reaction": "Subtle. The writers are taking notes.",
+            "weights": [0, 0, 0, -1]
+          },
+          {
+            "id": "friends-12-3",
+            "text": "The way we keep discovering new versions of each other.",
+            "reaction": "A choice with consequences. Mostly charming ones.",
+            "weights": [0, 0, 0, 1]
+          }
+        ]
+      }
+    ]
+  }
+]

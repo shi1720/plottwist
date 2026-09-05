@@ -1,0 +1,16 @@
+--- candidate.py
++++ candidate.py
+@@ -1,4 +1,10 @@
+-"""Task: revise one answer without losing another scene or double-counting points."""
++"""Canonical replacement: preserve order, input immutability, and unaffected answers."""
+ def revise(answers, scene_id, choice_id):
+-    # BUG: appending makes a duplicate answer the scorer must reject.
+-    return answers + [{'sceneId': scene_id, 'choiceId': choice_id}]
++    replacement = {'sceneId': scene_id, 'choiceId': choice_id}
++    result = [dict(answer) for answer in answers]
++    for index, answer in enumerate(result):
++        if answer['sceneId'] == scene_id:
++            result[index] = replacement
++            return result
++    result.append(replacement)
++    return result
