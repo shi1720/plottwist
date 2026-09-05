@@ -14,25 +14,25 @@
           {
             "id": "pilot-1-1",
             "text": "Enjoy the silence. Finally, a thought of my own.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The phone rests. Somewhere, a notification takes a personal day.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "pilot-1-2",
             "text": "Send one excellent meme to my favorite person.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One meme, one recipient. An extremely exclusive comedy tour.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "pilot-1-3",
             "text": "Ask if anyone wants to grab food.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The chat returns from the dead, asking about dietary restrictions.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "pilot-1-4",
             "text": "Start a poll for an unnecessarily ambitious group adventure.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The poll now includes dates, destinations, and someone’s aunt’s canoe.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -46,25 +46,25 @@
           {
             "id": "pilot-2-2",
             "text": "Ask how they feel about it first.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The fringe waits nervously while your friend opens the discussion.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "pilot-2-3",
             "text": "Gently suggest one small styling adjustment.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "One strategic hair clip joins the negotiating table.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "pilot-2-4",
             "text": "Give a clear, kind answer. They did ask.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Honesty arrives gently. The fringe has retained legal counsel.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "pilot-2-1",
             "text": "Find the one genuinely lovely thing and lead with that.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The haircut has entered its flattering lighting era.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -78,25 +78,25 @@
           {
             "id": "pilot-3-3",
             "text": "Pick one thing and loosely plan around it.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "One booking, several beautifully unassigned hours. Lunch may audition.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "pilot-3-4",
             "text": "Make a little itinerary. Freedom deserves structure.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Your free time now has a check-in time.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "pilot-3-1",
             "text": "Walk outside and see what happens.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "You step outside. The pavement was not expecting this responsibility.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "pilot-3-2",
             "text": "Keep a few ideas. Commit to absolutely none.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Three possible weekends are now competing for absolutely no funding.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -110,25 +110,25 @@
           {
             "id": "pilot-4-4",
             "text": "Build an entire fictional universe around the resident ghost.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The ghost has an origin story and concerns about merchandise royalties.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "pilot-4-1",
             "text": "Fix the menu, clean the counter, serve good coffee.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The espresso improves. The ghost still refuses to help with dishes.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "pilot-4-2",
             "text": "Keep what people already love and make it better.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Regulars get better pastries. The ghost keeps its usual table.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "pilot-4-3",
             "text": "Imagine a café that turns into a cinema at night.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The ghost requests a screening. You suspect it means Ghost.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -142,25 +142,25 @@
           {
             "id": "pilot-5-1",
             "text": "Find the balcony and a good view.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The skyline makes small talk. Surprisingly, it’s quite good at it.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "pilot-5-2",
             "text": "Have a real conversation with whoever is nearest.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One conversation deep, you’ve learned the dog’s entire medical history.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "pilot-5-3",
             "text": "Introduce myself to a small group.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "You join the circle. Someone immediately explains whose kitchen this is.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "pilot-5-4",
             "text": "Ask the room a question everyone has an opinion about.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The room is now passionately litigating the correct way to load dishwashers.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -174,25 +174,25 @@
           {
             "id": "pilot-6-2",
             "text": "Ask if they want comfort or solutions.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Two help options. Finally, a menu without a QR code.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "pilot-6-3",
             "text": "Help separate what happened from what can change.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The day’s disasters separate into two piles. Neither requires a label maker.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "pilot-6-4",
             "text": "Work through a concrete plan for tomorrow.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Tomorrow gets a plan. Tonight gets to remain in sweatpants.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "pilot-6-1",
             "text": "Make them feel heard before anything else.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The bad day gets a listener. Tomorrow can wait outside.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -206,25 +206,25 @@
           {
             "id": "pilot-7-3",
             "text": "Run through a short mental checklist.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Passport, socks, charger. Your brain briefly becomes a departure board.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "pilot-7-4",
             "text": "Use the packing list I definitely already have.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The packing list emerges, presumably wearing its own tiny lanyard.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "pilot-7-1",
             "text": "Throw in the essentials. The rest is a local shopping opportunity.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Your toothbrush is about to become an international purchase.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "pilot-7-2",
             "text": "Pack the obvious things and improvise the rest.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Socks are in. The charger will have to negotiate.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -238,25 +238,25 @@
           {
             "id": "pilot-8-4",
             "text": "Explore what cities might look like in 100 years.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Flying buses sound lovely. You still expect them to be late.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "pilot-8-1",
             "text": "Cook a meal I can make again tomorrow.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Tomorrow’s dinner just acquired a qualified instructor.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "pilot-8-2",
             "text": "Learn how to fix something around the house.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "That wobbly shelf is about to meet its academic rival.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "pilot-8-3",
             "text": "Try experimental storytelling. See where it goes.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Your opening sentence has already requested an unconventional ending.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -270,25 +270,25 @@
           {
             "id": "pilot-9-1",
             "text": "Sit with the feeling privately for a while.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "A private victory lap. The kettle provides the standing ovation.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "pilot-9-2",
             "text": "Tell my closest person, in great detail.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Your favorite person gets the news, the context, and the director’s commentary.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "pilot-9-3",
             "text": "Tell the group chat. Immediately.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The group chat receives breaking news and twelve consecutive exclamation marks.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "pilot-9-4",
             "text": "Turn it into an impromptu celebration.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Someone is already searching the drawer for birthday candles.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -302,25 +302,25 @@
           {
             "id": "pilot-10-2",
             "text": "Explain why the small gesture feels inconsiderate.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The carton is officially about more than breakfast.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "pilot-10-3",
             "text": "Agree on a straightforward replacement rule.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The fridge gets a treaty. Signatures may include a grocery receipt.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "pilot-10-4",
             "text": "Split the grocery budget so the system solves it.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The oat milk has been absorbed into a joint financial venture.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "pilot-10-1",
             "text": "Check if something else is going on with them.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The missing oat milk opens a conversation it was unqualified to host.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -334,25 +334,25 @@
           {
             "id": "pilot-11-3",
             "text": "Call a nearby alternative before moving everyone.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The next restaurant receives a very hopeful phone call.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "pilot-11-4",
             "text": "Open the backup options I saved earlier.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Your backup list finally gets the dramatic entrance it deserves.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "pilot-11-1",
             "text": "Great. Time for a food adventure.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The dinner party becomes a walking tour with increasingly audible stomachs.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "pilot-11-2",
             "text": "Wander until we find somewhere promising.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Eight people follow a promising smell. Someone calls it leadership.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -366,25 +366,25 @@
           {
             "id": "pilot-12-4",
             "text": "The beginning of something I cannot quite name yet.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The title is pending. The opening scene looks promising.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "pilot-12-1",
             "text": "The exact small moments that made it good.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The good coffee makes the highlights reel. It’s visibly proud.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "pilot-12-2",
             "text": "What happened, and what I learned from it.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Today gets a recap. The lesson requests a shorter meeting.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "pilot-12-3",
             "text": "The unexpected connections it made me notice.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Two unrelated moments now share a suspiciously meaningful look.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -406,25 +406,25 @@
           {
             "id": "office-1-1",
             "text": "Use the five minutes to gather my thoughts.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Your thoughts assemble while everyone else adjusts their imaginary camera angle.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "office-1-2",
             "text": "Say hello to the colleague I know best.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One familiar face. Two people pretending the microphone worked first time.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "office-1-3",
             "text": "Ask what everyone got up to over the weekend.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "You learn about three hikes and one unexpectedly complicated lasagna.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "office-1-4",
             "text": "Launch a completely unnecessary icebreaker.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Someone’s fun fact has just been promoted to opening remarks.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -438,25 +438,25 @@
           {
             "id": "office-2-2",
             "text": "Ask what matters most to them about it.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The idea gets a chance to explain its emotional attachment to existing.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "office-2-3",
             "text": "Compare the options against the actual requirements.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The requirements enter the room carrying a very short guest list.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "office-2-4",
             "text": "Show a small test that clearly demonstrates the issue.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The tiny test speaks. The idea suddenly needs a glass of water.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "office-2-1",
             "text": "Acknowledge the effort before discussing a change.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The effort gets acknowledged. The demo quietly loosens its tie.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -470,25 +470,25 @@
           {
             "id": "office-3-3",
             "text": "Choose the top two priorities and block time.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Two priorities get window seats. The rest can travel tomorrow.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "office-3-4",
             "text": "Reorganize the queue and execute the new plan.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The task queue receives a seating chart and a departure announcement.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "office-3-1",
             "text": "Follow whichever interesting problem catches my eye.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "An interesting problem waves from a tab you thought you’d closed.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "office-3-2",
             "text": "Pick something useful and leave room to wander.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One useful task, with a scenic route available afterward.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -502,25 +502,25 @@
           {
             "id": "office-4-4",
             "text": "Reimagine the entire product from a different starting point.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The whiteboard asks whether you mean all of it. You do.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "office-4-1",
             "text": "Fix the annoying thing everyone hits daily.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "That daily annoyance has no idea today is its last shift.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "office-4-2",
             "text": "Make an existing workflow noticeably smoother.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One less click. Somewhere, a tired index finger sends flowers.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "office-4-3",
             "text": "Prototype an unusual feature people have not asked for yet.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The prototype exists. Its future users have yet to be informed.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -534,25 +534,25 @@
           {
             "id": "office-5-1",
             "text": "Find a quiet seat with a good exit strategy.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Your seat offers excellent acoustics and direct access to leaving.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "office-5-2",
             "text": "Have a long conversation with one person.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The appetizers arrive midway through one surprisingly excellent conversation.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "office-5-3",
             "text": "Move between a couple of groups.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "You visit two tables. Your bread roll establishes a home base.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "office-5-4",
             "text": "Make sure every table knows every other table.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The tables merge socially. Facilities would like everyone to remain seated.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -566,25 +566,25 @@
           {
             "id": "office-6-2",
             "text": "Talk through the pressure they are under.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Three apologies later, the workload finally gets its own speaking part.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "office-6-3",
             "text": "Figure out the impact and agree a realistic recovery.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "A revised date emerges. The calendar agrees to stop glaring.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "office-6-4",
             "text": "Identify what failed in the process and fix the dependency.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The broken handoff gets investigated. The third “sorry” can retire.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "office-6-1",
             "text": "Check whether they are okay first.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The deadline waits outside while you check on the actual person.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -598,25 +598,25 @@
           {
             "id": "office-7-3",
             "text": "Cut scope and put the essentials in order.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The nice-to-haves receive a polite invitation to next month.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "office-7-4",
             "text": "Map dependencies, owners, and the critical path.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Every arrow gets an owner. Even the arrows look less worried.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "office-7-1",
             "text": "Start moving and adapt as the details emerge.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The launch moves. You move too. The details jog to catch up.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "office-7-2",
             "text": "Identify a starting point and adjust daily.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One first step. Tomorrow’s plan can meet you there.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -630,25 +630,25 @@
           {
             "id": "office-8-4",
             "text": "Sketch an entirely new way to solve the underlying problem.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The workaround gets a new house instead of another extension.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "office-8-1",
             "text": "Solve the exact friction they showed us.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The sticky note submits its retirement notice.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "office-8-2",
             "text": "Improve the workflow for similar customers.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Three tabs become fewer tabs. Nobody holds a farewell party.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "office-8-3",
             "text": "Wonder what hidden need created that behavior.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "You ask why. The sticky note suddenly seems like a witness.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -662,25 +662,25 @@
           {
             "id": "office-9-1",
             "text": "Write it up so people can explore at their own pace.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Your work gets a premiere with optional attendance and excellent headings.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "office-9-2",
             "text": "Show my immediate team first.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The team gets a private screening. Someone still asks for the link.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "office-9-3",
             "text": "Volunteer for a short walkthrough.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Five minutes, one walkthrough, and a cursor trying to look natural.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "office-9-4",
             "text": "Take the stage and make it an event.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The demo has an opening act. It’s your loading animation.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -694,25 +694,25 @@
           {
             "id": "office-10-2",
             "text": "Talk to both leads and understand their worries.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Two urgent messages become two conversations. Your tea applies for overtime.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "office-10-3",
             "text": "Compare the consequences of each delay.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The competing emergencies are asked to bring specific examples.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "office-10-4",
             "text": "Use impact and effort to make the tradeoff explicit.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The word “urgent” must now complete the same form as everyone else.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "office-10-1",
             "text": "Start with the team feeling most unsupported.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "You pull up a chair where the silence sounds particularly overworked.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -726,25 +726,25 @@
           {
             "id": "office-11-3",
             "text": "Agree a question and a time limit first.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The brainstorm gets an end time. Your lunch visibly relaxes.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "office-11-4",
             "text": "Define the outcome, constraints, and decision process.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The whiteboard gets a brief before anyone draws the inevitable cloud.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "office-11-1",
             "text": "Excellent. Let the ideas collide.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The whiteboard fills. Someone circles a word purely for emphasis.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "office-11-2",
             "text": "Start talking and discover the shape as we go.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The sentence starts walking before anyone checks the destination.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -758,25 +758,25 @@
           {
             "id": "office-12-4",
             "text": "The sense we are building toward something transformative.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The future looks promising. For now, please let the laptop sleep.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "office-12-1",
             "text": "Useful work that made someone’s day easier.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Someone’s day got easier. The laptop closes with a modest little flourish.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "office-12-2",
             "text": "A concrete improvement I can point to.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "You can point at the improvement. The cursor takes a small bow.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "office-12-3",
             "text": "A discovery that opened up a new direction.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "One discovery later, Monday has acquired an intriguing new tab.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -798,25 +798,25 @@
           {
             "id": "friends-1-1",
             "text": "Listen quietly and think before replying.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The seven-minute note gets a thoughtful audience and an intermission.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "friends-1-2",
             "text": "Send a short, thoughtful answer just to them.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "An entire audio novel receives a very considered postcard.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "friends-1-3",
             "text": "Reply with a voice note of my own.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The voice-note exchange has officially been renewed for a second season.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "friends-1-4",
             "text": "Call them. We are making this a live episode.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The recorded monologue becomes a live broadcast. Nobody checks the running time.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -830,25 +830,25 @@
           {
             "id": "friends-2-2",
             "text": "Help them feel less alone before deciding anything.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The phone stays nearby. So do you.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "friends-2-3",
             "text": "Talk through what is likely to happen if they send it.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The send button waits while you preview the possible sequels.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "friends-2-4",
             "text": "Suggest saving the draft and reviewing it tomorrow.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The draft gets a sleepover in Notes.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "friends-2-1",
             "text": "Ask what feeling they hope the message will resolve.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The draft has three paragraphs. Your question finds the unwritten fourth.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -862,25 +862,25 @@
           {
             "id": "friends-3-3",
             "text": "Narrow it to two dates and two places.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The destination shortlist is finally shorter than the group chat.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "friends-3-4",
             "text": "Create a poll, a budget, and a booking deadline.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The holiday now has a deadline. Someone asks if memes count as votes.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "friends-3-1",
             "text": "I will show up wherever we end up.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "You await coordinates. The group chat continues producing a travel documentary.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "friends-3-2",
             "text": "Suggest a rough direction and keep it flexible.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "A general direction enters the chat. Exact coordinates remain negotiable.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -894,25 +894,25 @@
           {
             "id": "friends-4-4",
             "text": "Create a whole experience around their imaginary dream life.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Their imaginary life gets a surprisingly convincing booking confirmation.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "friends-4-1",
             "text": "Get the useful thing they keep borrowing.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Your borrowed thing finally gets a permanent forwarding address.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "friends-4-2",
             "text": "Upgrade something they use every day.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "Their everyday favorite receives a promotion and wrapping paper.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "friends-4-3",
             "text": "Find something that references a private running joke.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Nobody else understands the gift. The two of you need a minute.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -926,25 +926,25 @@
           {
             "id": "friends-5-1",
             "text": "Change immediately. This is a gift.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The outfit’s shift ends early. Sweatpants have been called in.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "friends-5-2",
             "text": "See if one friend wants something quieter.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One friend gets an invitation with considerably less background noise.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "friends-5-3",
             "text": "Message another group and salvage the night.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The outfit gets a second audition before the evening closes.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "friends-5-4",
             "text": "Invite people over. The event is now here.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The venue relocates. Your laundry is hastily reassigned to the bedroom.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -958,25 +958,25 @@
           {
             "id": "friends-6-2",
             "text": "Look for what each person needs underneath the argument.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The argument reveals two requests hiding inside one very long sentence.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "friends-6-3",
             "text": "Separate the facts from the assumptions.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The facts sit together. The assumptions insist they know the host.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "friends-6-4",
             "text": "Evaluate each claim fairly, even if it is awkward.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Your chips are now courtroom snacks. Both sides request additional time.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "friends-6-1",
             "text": "Make sure both feel genuinely listened to.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "Both friends get heard. Your chips remain admirably neutral.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -990,25 +990,25 @@
           {
             "id": "friends-7-3",
             "text": "Rework portions and seating before we start.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The portions shrink slightly. The seating chart discovers a previously unknown chair.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "friends-7-4",
             "text": "Quickly coordinate food, seats, and who brings what.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Everyone gets a job. Even the spare stool has responsibilities.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "friends-7-1",
             "text": "Excellent. This just became a potluck.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The dinner becomes a potluck before the extra guests remove their coats.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "friends-7-2",
             "text": "Order something extra and squeeze everyone in.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The delivery order grows. Elbows begin diplomatic talks.",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -1022,25 +1022,25 @@
           {
             "id": "friends-8-4",
             "text": "Invent the wildly different lives we could have lived.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Your alternate selves own a vineyard. Neither has explained the financing.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "friends-8-1",
             "text": "Swap actual stories from our week.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The week’s stories get fresh air and several unnecessary detours.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "friends-8-2",
             "text": "Notice the neighborhood and what is changing.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The neighborhood gets reviewed. That new bakery scores suspiciously well.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "friends-8-3",
             "text": "Explore a strange idea neither of us can stop thinking about.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The strange idea gets stranger. Your step count quietly benefits.",
             "weights": [0, 0, 0, 1]
           }
         ]
@@ -1054,25 +1054,25 @@
           {
             "id": "friends-9-1",
             "text": "Give them room to settle in.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The welcome comes with room to breathe and no surprise icebreaker.",
             "weights": [-3, 0, 0, 0]
           },
           {
             "id": "friends-9-2",
             "text": "Ask one easy question and really listen.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "One easy question later, you know a surprisingly excellent dog fact.",
             "weights": [-1, 0, 0, 0]
           },
           {
             "id": "friends-9-3",
             "text": "Introduce them to people with shared interests.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "Two people discover a shared obsession. You quietly claim the introduction credit.",
             "weights": [1, 0, 0, 0]
           },
           {
             "id": "friends-9-4",
             "text": "Pull them straight into the fun.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The newcomer joins the fun. Someone offers an extremely unhelpful rules summary.",
             "weights": [3, 0, 0, 0]
           }
         ]
@@ -1086,25 +1086,25 @@
           {
             "id": "friends-10-2",
             "text": "Ask what a better day would actually feel like.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "A better Tuesday gets described. The current Tuesday takes notes.",
             "weights": [0, -1, 0, 0]
           },
           {
             "id": "friends-10-3",
             "text": "Compare options, savings, and realistic timelines.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "The dream gets a budget. Rent insists on attending.",
             "weights": [0, 1, 0, 0]
           },
           {
             "id": "friends-10-4",
             "text": "Build a decision framework with the key tradeoffs.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "The big decision gets columns. Snacks remain an unlisted requirement.",
             "weights": [0, 3, 0, 0]
           },
           {
             "id": "friends-10-1",
             "text": "Explore what the job is doing to their wellbeing.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The job description steps aside so the person can finish their sentence.",
             "weights": [0, -3, 0, 0]
           }
         ]
@@ -1118,25 +1118,25 @@
           {
             "id": "friends-11-3",
             "text": "Read the basics and try a practice round.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "A practice round begins. Nobody agrees whether the score counts.",
             "weights": [0, 0, 1, 0]
           },
           {
             "id": "friends-11-4",
             "text": "Understand the rules first so everyone has a fair game.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "Page nine finally explains the tiny wooden sheep.",
             "weights": [0, 0, 3, 0]
           },
           {
             "id": "friends-11-1",
             "text": "Make up a version and start playing.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The new rules pass unanimously before anyone knows what they mean.",
             "weights": [0, 0, -3, 0]
           },
           {
             "id": "friends-11-2",
             "text": "Learn as we go. A little confusion is the fun.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "The first round is sponsored by “wait, can you do that?”",
             "weights": [0, 0, -1, 0]
           }
         ]
@@ -1150,25 +1150,25 @@
           {
             "id": "friends-12-4",
             "text": "All the futures we can still imagine together.",
-            "reaction": "Bold of you. Excellent television.",
+            "reaction": "You’re still making future plans with someone who remembers your first haircut.",
             "weights": [0, 0, 0, 3]
           },
           {
             "id": "friends-12-1",
             "text": "The familiar little rituals that still feel right.",
-            "reaction": "A quiet plot twist. We respect it.",
+            "reaction": "The old ritual returns. Someone still orders the same fries.",
             "weights": [0, 0, 0, -3]
           },
           {
             "id": "friends-12-2",
             "text": "Having someone who knows what my real life looks like.",
-            "reaction": "Subtle. The writers are taking notes.",
+            "reaction": "No backstory needed. They already know which cupboard refuses to close.",
             "weights": [0, 0, 0, -1]
           },
           {
             "id": "friends-12-3",
             "text": "The way we keep discovering new versions of each other.",
-            "reaction": "A choice with consequences. Mostly charming ones.",
+            "reaction": "New versions, same friend. Your shared jokes need occasional software updates.",
             "weights": [0, 0, 0, 1]
           }
         ]

@@ -1,5 +1,21 @@
 # Release validation
 
+## Character and storytelling update — 2026-09-05
+
+Executed after the first release, against the revised production Worker:
+
+- **39 unit/property/API/differential/content tests pass** across 5 files; strict TypeScript and lint pass. Scoring/API coverage remains 95.52% statements, 93.63% branches, 100% functions, 96.52% lines.
+- **32 browser tests pass** in desktop and mobile Chromium, including all three complete episodes, save/share/export, keyboard controls, automated accessibility scans, and the new portrait/reaction/navigation regressions.
+- All **16 distinct portrait URLs load** in both browser projects; all character assets are unique WebPs with a total size of **474,676 bytes** (21,768–34,674 each). Each has intrinsic dimensions and a matching alt description.
+- All **144 reactions are unique**. The frozen v1 IDs, weights and character names pass the contract check; existing shared links retain their identity.
+- **Three evaluation baselines fail, three golden solutions pass, and two negative regressions fail** as expected.
+- Reviewed desktop and 390 × 844 mobile renders. Independent LLM product judging used a frozen six-category rubric; a separate code reviewer checked runtime, privacy and presentation regressions. See [judge report](DESIGN_REVIEW.md).
+- Browser navigation now stays visible on mobile; current act framing appears above mobile scenes. Shared results offer “Play this episode”; matching local results retain “Revisit my answers.”
+
+The historical release evidence below describes version 1.0.0 before this design update, including its now-superseded four-family atlas.
+
+## Initial release
+
 Recorded on **2026-09-05** for the initial 1.0.0 release. These are executed checks, not projected targets.
 
 | Check                                       | Observed result                                                                                                                  |

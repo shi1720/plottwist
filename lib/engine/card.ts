@@ -1,3 +1,4 @@
+import { characterArtPath } from '../content/stories';
 import type { Character } from './types';
 /** Browser-native typography card: no external render service or user-data upload. */
 export async function downloadCard(
@@ -22,12 +23,9 @@ export async function downloadCard(
   ctx.fillText(`CAST ${parseInt(character.code, 2) + 1}/16`, 1000, 100);
   ctx.textAlign = 'left';
   const image = new Image();
-  image.src = '/cast-ensemble.webp';
+  image.src = characterArtPath(character.code);
   await image.decode();
-  const x = { spark: 0, cloud: 400, flower: 740, square: 1120 }[
-    character.family
-  ];
-  ctx.drawImage(image, x, 150, 400, 750, 300, 155, 480, 610);
+  ctx.drawImage(image, 230, 160, 620, 620);
   ctx.fillStyle = '#24231f';
   ctx.font = 'bold 25px Arial';
   ctx.fillText('YOU ARE', 80, 815);

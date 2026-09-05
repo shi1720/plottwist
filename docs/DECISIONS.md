@@ -32,10 +32,14 @@
 
 **Tradeoff:** maintaining a second implementation and frozen fixtures takes discipline. The tasks are transparent examples, not hidden or tamper-proof evaluations.
 
-## ADR-005: one compressed art atlas
+## ADR-005: one compressed art atlas (superseded)
 
-**Decision:** one original four-character WebP ensemble reused as mascot families and poster crops.
+The initial release reused four illustrated families to keep transfer size small. User feedback and the design judge found that repeated silhouettes made the sixteen identities hard to distinguish.
 
-**Reason:** retain a recognizable art direction without downloading 16 full-size portraits. Local Canvas export reuses the same origin asset.
+## ADR-006: individual portraits and presentation-only storytelling
 
-**Tradeoff:** four visual families represent 16 distinct written archetypes; the project does not claim sixteen uniquely illustrated mascots.
+**Decision:** replace the atlas with sixteen separately generated, 640 × 640 WebP portraits. A single code-to-path helper serves every character surface, including PNG export. Three-act framing, choice-specific reactions, and fictional character cold opens are separate from scoring.
+
+**Reason:** visual identity is part of the product, not interchangeable decoration. Keeping narrative presentation outside the frozen scoring contract allows copy improvements without breaking existing shared links.
+
+**Tradeoff:** more total image bytes and requests (roughly 22–35 KB per portrait). Intrinsic dimensions prevent layout shifts; offscreen gallery images load lazily. The story is authored character fiction, not an LLM-generated psychological inference. The result explicitly labels it as fiction, while a separate local-only callback quotes a real selected answer.

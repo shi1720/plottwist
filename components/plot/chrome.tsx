@@ -1,3 +1,4 @@
+import { CHARACTER_STORIES, characterArtPath } from '@/lib/content/stories';
 import { ArrowUpRight } from 'lucide-react';
 export function Header() {
   return (
@@ -31,17 +32,23 @@ export function Footer() {
   );
 }
 export function CharacterArt({
-  family,
+  code,
   className = '',
+  eager = false,
 }: {
-  family: string;
+  code: string;
   className?: string;
+  eager?: boolean;
 }) {
   return (
-    <div
-      className={`character-art ${family} ${className}`}
-      role="img"
-      aria-label={`${family === 'spark' ? 'Orange star' : family === 'cloud' ? 'Lavender cloud' : family === 'flower' ? 'Yellow flower' : 'Mint square'} cast mascot`}
+    <img
+      className={`character-art ${className}`}
+      src={characterArtPath(code)}
+      alt={CHARACTER_STORIES[code]?.artAlt ?? 'Plot Twist character'}
+      width={640}
+      height={640}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
     />
   );
 }

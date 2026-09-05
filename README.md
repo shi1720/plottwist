@@ -2,7 +2,7 @@
 
 # Plot Twist ✳
 
-### Your life. Questionable casting.
+### Your life. But make it a sitcom.
 
 A personality sitcom for people who bring a spreadsheet to brunch—or cause the spreadsheet to exist.
 
@@ -12,7 +12,10 @@ A personality sitcom for people who bring a spreadsheet to brunch—or cause the
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)
 ![License](https://img.shields.io/badge/license-MIT-24231f)
 
-<img src="public/cast-ensemble.webp" alt="Plot Twist's orange star, lavender cloud, yellow flower, and mint square mascots" width="760" />
+<img src="public/characters/0000.webp" alt="Cozy Enigma, the lavender mug" width="175" />
+<img src="public/characters/0101.webp" alt="Rabbit Hole Resident" width="175" />
+<img src="public/characters/0110.webp" alt="Spreadsheet Sage, the calculator" width="175" />
+<img src="public/characters/1001.webp" alt="Lovable Menace, the orange imp" width="175" />
 
 </div>
 
@@ -27,7 +30,8 @@ Warm comedy instead of a judgment score. Explainable rules instead of an opaque 
 ## What actually works
 
 - **Three complete episodes:** The Pilot Episode, Out of Office, and The Group Chat. 36 original scenes, 144 choices.
-- **16 reachable archetypes:** every character is attainable in every episode, verified by tests.
+- **16 uniquely illustrated, reachable archetypes:** individual silhouettes, props, character scenes and portraits used consistently throughout the app. Every character is attainable in every episode.
+- **A sitcom that talks back:** three acts per episode and 144 choice-specific comedy reactions, plus a fictional cold open for each result.
 - **Explainable results:** four tendencies, a character brief, affectionate roast, strength, growth prompt, and local answer receipts.
 - **Reliable play:** keyboard-accessible choices, previous/next navigation, answer revision, per-episode resume, restart, corrupt-storage recovery, and cross-tab clear-data handling.
 - **Privacy-conscious sharing:** versioned links carry four coarse tendencies, never an answer history. Strong values are capped before sharing so an extreme score does not reveal all three underlying answers.
@@ -73,17 +77,17 @@ The browser suite has desktop and mobile Chromium projects. CI runs it against t
 
 The application deliberately keeps its scoring algorithm small. The engineering depth lives in **contracts, failure behavior, privacy, reproducibility, and verification**:
 
-| Concern                  | Implementation                                                    | Evidence                                                |
-| ------------------------ | ----------------------------------------------------------------- | ------------------------------------------------------- |
-| Correct scoring          | Pure TypeScript core; canonical IDs; runtime validation           | Seeded property tests; all 16 archetypes reachable      |
-| Independent verification | Python reference implementation                                   | 300 complete/partial cross-language fixtures            |
-| User revisions           | Answers are source of truth; scores are recomputed                | Browser edit/reload trace and regression tests          |
-| Untrusted input          | Strict link grammar, storage parser, 8 KiB streamed body bound    | Malformed, oversized, duplicate, foreign, sparse inputs |
-| Privacy                  | Local play, coarse aggregate sharing, cross-tab deletion          | Extreme-score regression and two-tab browser test       |
-| Performance              | Linear catalog indexing, 147 KB shared WebP, lazy card generation | Operation-count evaluation; reproducible microbenchmark |
-| Reproducible repair      | Hashed task fixtures and clean candidate execution                | Failing baseline → passing golden solution              |
+| Concern                  | Implementation                                                           | Evidence                                                |
+| ------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------- |
+| Correct scoring          | Pure TypeScript core; canonical IDs; runtime validation                  | Seeded property tests; all 16 archetypes reachable      |
+| Independent verification | Python reference implementation                                          | 300 complete/partial cross-language fixtures            |
+| User revisions           | Answers are source of truth; scores are recomputed                       | Browser edit/reload trace and regression tests          |
+| Untrusted input          | Strict link grammar, storage parser, 8 KiB streamed body bound           | Malformed, oversized, duplicate, foreign, sparse inputs |
+| Privacy                  | Local play, coarse aggregate sharing, cross-tab deletion                 | Extreme-score regression and two-tab browser test       |
+| Performance              | Linear catalog indexing, 22–35 KB individual WebPs, lazy card generation | Operation-count evaluation; reproducible microbenchmark |
+| Reproducible repair      | Hashed task fixtures and clean candidate execution                       | Failing baseline → passing golden solution              |
 
-See [validation evidence](docs/VALIDATION.md) for actual results and boundaries, [the role-focused walkthrough](docs/PORTFOLIO.md), and [the review log](docs/REVIEW.md) for issues found and fixed during independent review.
+See [validation evidence](docs/VALIDATION.md) for actual results and boundaries, [the role-focused walkthrough](docs/PORTFOLIO.md), [the design-judge rubric](docs/DESIGN_REVIEW.md), and [the review log](docs/REVIEW.md) for issues found and fixed during independent review.
 
 ## Repository map
 

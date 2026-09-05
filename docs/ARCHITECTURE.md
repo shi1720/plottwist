@@ -70,7 +70,7 @@ Concurrent edits to the same episode use last-writer-wins local storage; this is
 
 React 19 runs through Vinext/Vite into a Cloudflare Worker. Server routes render the shell and catalog; client components initialize browser-only state after hydration. Native anchors intentionally start a fresh route document, making URL-derived state initialization and local resume predictable. This trades some SPA navigation speed for a simpler lifecycle.
 
-Base UI/Shadcn radio, progress, and select primitives provide interactive semantics. Custom CSS implements the retro print palette and responsive layouts. One compressed WebP atlas is reused for the ensemble and four mascot families; the 16 characters are distinguished by text and code rather than falsely claiming 16 unique illustrations.
+Base UI/Shadcn radio, progress, and select primitives provide interactive semantics. Custom CSS implements the retro print palette and responsive layouts. Sixteen individual 640 × 640 WebP portraits map to frozen character codes through `characterArtPath`. Cast, detail, home, chemistry, result, and Canvas export use this same mapping. Presentation-only `stories.ts` supplies original character fiction and three-act episode framing; choice reactions live beside existing choices. These copy and artwork changes do not change the v1 scoring contract. Gallery art loads lazily; result and hero portraits load eagerly.
 
 Optional WebMCP exposes `read_quiz_scene` and `select_quiz_answer`. It is feature-detected, shares UI actions, includes the complete scene context, and cleans up with AbortSignal. It does not silently complete the quiz.
 

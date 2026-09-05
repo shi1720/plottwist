@@ -18,6 +18,7 @@
   --radius-lg: 1rem;
 }
 :root {
+  --ink: #24231f;
   --background: #f8f5ed;
   --foreground: #24231f;
   --primary: #ee663c;
@@ -914,28 +915,6 @@ footer > a:last-child {
   font-size: 13px;
   margin-bottom: -10px;
 }
-.character-art {
-  height: 235px;
-  width: 210px;
-  background-image: url('/cast-ensemble.webp');
-  background-size: 800px auto;
-  background-repeat: no-repeat;
-  mix-blend-mode: multiply;
-  margin: 15px auto;
-  background-position-y: -50px;
-}
-.character-art.spark {
-  background-position-x: 0;
-}
-.character-art.cloud {
-  background-position-x: -203px;
-}
-.character-art.flower {
-  background-position-x: -385px;
-}
-.character-art.square {
-  background-position-x: -580px;
-}
 .result-page {
   max-width: 1280px;
   margin: auto;
@@ -978,23 +957,6 @@ footer > a:last-child {
   font-size: 10px;
   letter-spacing: 1.1px;
   font-weight: 650;
-}
-.result-poster .character-art {
-  height: 300px;
-  width: 267px;
-  background-size: 1000px auto;
-  background-position-y: -62px;
-  margin-top: 20px;
-  margin-bottom: 12px;
-}
-.result-poster .character-art.cloud {
-  background-position-x: -253px;
-}
-.result-poster .character-art.flower {
-  background-position-x: -481px;
-}
-.result-poster .character-art.square {
-  background-position-x: -725px;
 }
 .result-poster .eyebrow {
   justify-content: center;
@@ -1338,11 +1300,6 @@ footer > a:last-child {
 .cast-card .card-top {
   font-size: 10px;
 }
-.cast-card .character-art {
-  transform: scale(0.85);
-  margin: -10px auto -15px;
-  max-width: 100%;
-}
 .cast-card h2 {
   font-size: 24px;
   line-height: 1.15;
@@ -1622,14 +1579,6 @@ footer > a:last-child {
   gap: 35px;
   margin: 25px auto;
 }
-.cast-strip .character-art {
-  margin: 0;
-  height: 155px;
-  transform: scale(0.65);
-  transform-origin: top center;
-  width: 210px;
-  margin-bottom: -50px;
-}
 .skip-link {
   position: fixed;
   top: -100px;
@@ -1722,12 +1671,6 @@ footer > a:last-child {
   .result-poster {
     padding: 20px;
   }
-  .result-poster .character-art {
-    transform: scale(0.85);
-    transform-origin: center;
-    margin: -5px auto -12px;
-    max-width: 100%;
-  }
   .result-poster h2 {
     font-size: 34px;
   }
@@ -1761,10 +1704,6 @@ footer > a:last-child {
   }
   .character-copy h2 {
     font-size: 28px;
-  }
-  .character-detail .result-poster .character-art {
-    transform: scale(0.8);
-    max-width: 100%;
   }
   .character-detail .result-poster h1 {
     font-size: 32px;
@@ -1855,11 +1794,6 @@ footer > a:last-child {
     margin: 0 auto;
     padding: 23px;
   }
-  .result-poster .character-art {
-    transform: none;
-    max-width: none;
-    margin: 5px auto 5px;
-  }
   .result-poster h2 {
     font-size: 43px;
   }
@@ -1946,23 +1880,6 @@ footer > a:last-child {
   .cast-card {
     padding: 13px;
   }
-  .cast-card .character-art {
-    height: 145px;
-    width: 130px;
-    transform: none;
-    background-size: 500px auto;
-    background-position-y: -30px;
-    margin: 10px auto 0;
-  }
-  .cast-card .character-art.cloud {
-    background-position-x: -126px;
-  }
-  .cast-card .character-art.flower {
-    background-position-x: -240px;
-  }
-  .cast-card .character-art.square {
-    background-position-x: -362px;
-  }
   .cast-card .card-top {
     font-size: 8px;
     letter-spacing: 0.7px;
@@ -1995,9 +1912,6 @@ footer > a:last-child {
     grid-template-columns: 1fr;
     gap: 35px;
   }
-  .character-detail .result-poster .character-art {
-    transform: none;
-  }
   .character-detail .result-poster h1 {
     font-size: 42px;
   }
@@ -2018,22 +1932,6 @@ footer > a:last-child {
     font-size: 12px !important;
     padding: 8px !important;
     min-height: 53px !important;
-  }
-  .co-star .character-art {
-    height: 155px;
-    width: 130px;
-    background-size: 500px auto;
-    background-position-y: -30px;
-    margin: 10px auto 0;
-  }
-  .co-star .character-art.cloud {
-    background-position-x: -126px;
-  }
-  .co-star .character-art.flower {
-    background-position-x: -240px;
-  }
-  .co-star .character-art.square {
-    background-position-x: -362px;
   }
   .co-star > p:last-child {
     font-size: 11px;
@@ -2092,24 +1990,632 @@ footer > a:last-child {
     font-size: 9px;
   }
 }
-/* Preserve each mascot's full silhouette on the large character posters. */
+
+/* Season two: an ensemble of individual portraits, with a story on every surface. */
+.character-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin: 0 auto;
+}
+.hero.season-two {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  gap: 5%;
+}
+.season-two h1 {
+  font-size: clamp(58px, 5.7vw, 84px);
+}
+.season-two .hero-description {
+  max-width: 455px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.season-two .micro-copy {
+  font-size: 14px;
+}
+.hero-foot {
+  font-size: 12px;
+  gap: 12px;
+}
+.hero-foot span + span:before {
+  margin-right: 12px;
+}
+.casting-stage {
+  border: 2px solid var(--ink);
+  background: #bfb0ed;
+  border-radius: 10px;
+  padding: 26px 24px 0;
+  box-shadow: 7px 8px 0 var(--ink);
+  transform: rotate(1.2deg);
+  min-width: 0;
+  position: relative;
+}
+.stage-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #24231f66;
+  padding-bottom: 16px;
+}
+.casting-stage h2 {
+  font-size: clamp(34px, 3.7vw, 52px);
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin: 24px 0 12px;
+}
+.casting-stage > p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.stage-cast {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+.stage-character {
+  display: block;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  padding: 5px 7px 12px;
+  box-shadow: 2px 3px 0 #24231f;
+  transition: transform 0.2s;
+}
+.stage-character:nth-child(1) {
+  transform: rotate(-5deg);
+}
+.stage-character:nth-child(2) {
+  transform: translateY(13px) rotate(3deg);
+}
+.stage-character:nth-child(3) {
+  transform: rotate(-3deg);
+}
+.stage-character:hover {
+  transform: translateY(-5px);
+}
+.stage-character span {
+  display: block;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.25;
+  padding: 0 3px;
+  min-height: 36px;
+}
+.stage-punchline {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 40px;
+  padding: 18px 0;
+  border-top: 1px solid #24231f66;
+  font-size: 14px;
+}
+.stage-punchline > span {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.stage-punchline strong {
+  font-weight: 600;
+}
+.stage-punchline svg {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.episode-card .episode-line {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  min-height: 50px;
+  color: #4d4035;
+  border-top: 1px solid #24231f33;
+  padding-top: 16px;
+}
+.episode-card .card-top,
+.episode-card .card-bottom {
+  font-size: 12px;
+}
+.preview-cast-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.preview-cast-card {
+  position: relative;
+  border: 1.5px solid var(--ink);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 12px 20px 24px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.preview-cast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 3px 4px 0 var(--ink);
+}
+.preview-cast-card h3 {
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  font-weight: 750;
+  margin: 5px 0 12px;
+}
+.preview-cast-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 25px;
+}
+.preview-cast-card > svg {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.cast-preview {
+  padding-top: 10px;
+  padding-bottom: 80px;
+}
+.cast-opening {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 45px;
+  align-items: center;
+  padding: 55px 0 45px;
+}
+.cast-opening h1 {
+  font-size: clamp(40px, 4vw, 60px);
+  line-height: 1.03;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+  margin: 0 0 22px;
+}
+.cast-opening h1 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  color: var(--orange);
+}
+.cast-opening > div > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+  max-width: 520px;
+}
+.cold-open-script {
+  padding: 24px 26px;
+  background: #eeeedf;
+  border: 1px solid #24231f;
+  box-shadow: 5px 5px 0 #d4d4bf;
+  transform: rotate(1deg);
+}
+.script-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #24231f44;
+  padding-bottom: 13px;
+  margin-bottom: 22px;
+}
+.cold-open-script p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0 0 17px;
+}
+.cold-open-script strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.script-cut {
+  font:
+    italic 16px Georgia,
+    serif;
+  display: block;
+  text-align: right;
+  color: #60574b;
+  margin-top: 20px;
+}
+.cast-toolbar > span {
+  font-size: 12px;
+}
+.search-field input {
+  font-size: 16px;
+}
+.cast-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background: #f3eddc;
+}
+.cast-card.peach {
+  background: #f5ceba;
+}
+.cast-card.lilac {
+  background: #e3d9f2;
+}
+.cast-card.green {
+  background: #dce6c4;
+}
+.cast-card .card-top {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.cast-card .character-art {
+  margin: 4px auto 8px;
+}
+.cast-card h2 {
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+.cast-card > p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 48px;
+}
+.cast-card-tags {
+  font-size: 14px;
+  color: #51463d;
+  line-height: 1.4;
+  margin-top: auto;
+  min-height: 60px;
+}
+.cast-card-tags > span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
 .result-poster .character-art {
-  width: 200px;
-  height: 330px;
-  background-size: 768px auto;
-  background-position-y: -95px;
-  transform: none;
-  margin: 20px auto 8px;
+  width: min(100%, 330px);
+  height: auto;
+  margin: 15px auto;
 }
-.result-poster .character-art.spark {
-  background-position-x: -10px;
+.co-star .character-art {
+  width: min(100%, 260px);
+  height: auto;
+  margin: 10px auto;
 }
-.result-poster .character-art.cloud {
-  background-position-x: -201px;
+.cast-strip .character-art {
+  width: 150px;
 }
-.result-poster .character-art.flower {
-  background-position-x: -366px;
+.poster-top,
+.result-poster .poster-top {
+  font-size: 12px;
 }
-.result-poster .character-art.square {
-  background-position-x: -552px;
+.character-cold-open {
+  background: #eeeedf;
+  border: 1px solid #c8c0b0;
+  border-left: 4px solid #24231f;
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.character-cold-open .eyebrow {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.character-cold-open > p:not(.eyebrow) {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+.character-cold-open > span {
+  display: block;
+  margin-top: 16px;
+  font:
+    italic 16px Georgia,
+    serif;
+  color: #5d5347;
+}
+.choice-callback {
+  border-bottom: 1px solid #c8c0b0;
+  padding: 0 0 24px;
+  margin: 0 0 24px;
+}
+.choice-callback .eyebrow {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.choice-callback blockquote {
+  font:
+    italic 21px/1.5 Georgia,
+    serif;
+  margin: 10px 0;
+}
+.choice-callback > p:last-child {
+  font-size: 14px;
+  color: #655b4e;
+}
+.act-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 25px;
+}
+.act-list li {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #24231f33;
+  color: #61564d;
+}
+.act-list li > span {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  border: 1px solid #24231f88;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.act-list small {
+  display: block;
+  font-size: 12px;
+  margin: 0 0 5px;
+  letter-spacing: 1px;
+}
+.act-list strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 550;
+}
+.act-list [aria-current] {
+  color: #24231f;
+}
+.act-list [aria-current] > span {
+  background: #24231f;
+  color: #fffaf0;
+}
+.act-list [aria-current] strong {
+  font-weight: 750;
+}
+.episode-sidebar .act-note {
+  font:
+    italic 19px/1.5 Georgia,
+    serif;
+  color: #423a31;
+}
+.director-reaction {
+  min-height: 92px;
+  border-left: 3px solid #cec7b8;
+  padding: 12px 16px;
+  margin-top: 22px;
+  background: #f0ece2;
+}
+.director-reaction.has-reaction {
+  border-color: #6d573b;
+  background: #f0e6ce;
+}
+.director-reaction > span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #61523f;
+}
+.director-reaction > p {
+  font:
+    italic 17px/1.5 Georgia,
+    serif;
+  margin: 6px 0 0;
+}
+@media (max-width: 1100px) {
+  .cast-opening {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .preview-cast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .casting-stage {
+    padding: 20px 16px 0;
+  }
+  .stage-cast {
+    gap: 7px;
+  }
+  .stage-character span {
+    font-size: 12px;
+  }
+  .stage-topline {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 800px) {
+  .cast-opening {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 35px;
+  }
+  .cold-open-script {
+    max-width: 550px;
+  }
+  .cast-card h2 {
+    font-size: 25px;
+  }
+  .act-list,
+  .episode-sidebar .act-note {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .hero.season-two {
+    padding: 32px 6% 38px;
+    gap: 32px;
+  }
+  .season-two h1 {
+    font-size: clamp(52px, 12vw, 76px);
+    letter-spacing: -3px;
+  }
+  .season-two .hero-description {
+    font-size: 17px;
+    margin: 20px 0;
+  }
+  .season-two .hero-foot {
+    display: none;
+  }
+  .season-two .micro-copy {
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  .casting-stage {
+    transform: none;
+    padding: 22px 18px 0;
+  }
+  .casting-stage h2 {
+    font-size: 40px;
+  }
+  .casting-stage > p {
+    font-size: 16px;
+  }
+  .casting-stage > p br {
+    display: none;
+  }
+  .stage-punchline {
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 35px;
+  }
+  .stage-punchline > span {
+    font-size: 12px;
+  }
+  .stage-character span {
+    font-size: 12px;
+  }
+  .hero .eyebrow {
+    font-size: 12px;
+  }
+  .cast-opening h1 {
+    font-size: clamp(38px, 9vw, 54px);
+    letter-spacing: -1.8px;
+  }
+  .cast-opening .eyebrow {
+    font-size: 12px;
+  }
+  .cold-open-script {
+    padding: 20px;
+  }
+  .cast-grid {
+    gap: 14px;
+  }
+  .cast-card {
+    padding: 14px;
+  }
+  .cast-card .card-top {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .cast-card h2 {
+    font-size: 23px;
+    line-height: 1.1;
+  }
+  .cast-card > p {
+    font-size: 16px;
+    min-height: 0;
+  }
+  .cast-card-tags {
+    font-size: 14px;
+  }
+  .cast-card .character-art {
+    margin: 8px auto 12px;
+  }
+  .preview-cast-grid {
+    gap: 14px;
+  }
+  .preview-cast-card {
+    padding: 10px 14px 22px;
+  }
+  .preview-cast-card h3 {
+    font-size: 22px;
+  }
+  .co-star .eyebrow {
+    font-size: 12px;
+  }
+  .co-star > p:last-child {
+    font-size: 14px;
+  }
+  .character-select {
+    font-size: 14px !important;
+  }
+  .character-cold-open {
+    padding: 18px;
+  }
+  .director-reaction {
+    min-height: 105px;
+  }
+}
+@media (max-width: 370px) {
+  .cast-grid {
+    grid-template-columns: 1fr;
+  }
+  .cast-card .character-art {
+    max-width: 240px;
+  }
+  .preview-cast-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.mobile-act-story {
+  display: none;
+}
+.privacy-note,
+.method-note {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+@media (max-width: 800px) {
+  .mobile-act-story {
+    display: block;
+    border-bottom: 1px solid #c8c0b0;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+  }
+  .mobile-act-story .eyebrow {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  .mobile-act-story > p:last-child {
+    font:
+      italic 17px/1.5 Georgia,
+      serif;
+    margin: 0;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: auto;
+    padding: 18px 6% 0;
+    gap: 16px;
+  }
+  .site-header nav {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    padding: 13px 0;
+    border-top: 1px solid #d5d1c7;
+  }
+  .site-header nav a {
+    font-size: 14px;
+  }
+  .privacy-note,
+  .method-note {
+    font-size: 13px;
+  }
 }

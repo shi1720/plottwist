@@ -8,6 +8,7 @@ import {
   Check,
   RotateCcw,
 } from 'lucide-react';
+import { CHARACTER_STORIES } from '@/lib/content/stories';
 import { getCharacter } from '@/lib/content/characters';
 import { getPack } from '@/lib/content/packs';
 import { decodeResult, encodeResult } from '@/lib/engine/sharing';
@@ -90,7 +91,7 @@ export default function ResultView() {
             <span>OFFICIALLY UNOFFICIAL</span>
             <span>CAST № {parseInt(character.code, 2) + 1}</span>
           </div>
-          <CharacterArt family={character.family} />
+          <CharacterArt code={character.code} eager />
           <p className="eyebrow">YOU ARE</p>
           <h2>{character.name}</h2>
           <p className="poster-tagline">{character.tagline}</p>
@@ -112,6 +113,13 @@ export default function ResultView() {
             <h2>A little too familiar?</h2>
             <p>{character.description}</p>
             <blockquote>“{character.quote}”</blockquote>
+          </div>
+          <div className="character-cold-open">
+            <p className="eyebrow">
+              YOUR COLD OPEN · A LITTLE CHARACTER FICTION
+            </p>
+            <p>{CHARACTER_STORIES[character.code].coldOpen}</p>
+            <span>[ cue your extremely specific theme music ]</span>
           </div>
           <div className="roast-box">
             <p className="eyebrow">A LOVINGLY WRITTEN ROAST</p>
@@ -176,6 +184,22 @@ export default function ResultView() {
             No mysterious algorithm <ArrowUpRight size={18} />
           </a>
         </div>
+        {result.evidence.length > 0 && (
+          <div className="choice-callback">
+            <p className="eyebrow">PREVIOUSLY, IN YOUR EPISODE…</p>
+            <p>
+              {
+                pack.scenes.find((s) => s.id === result.evidence[0].sceneId)
+                  ?.title
+              }
+            </p>
+            <blockquote>“{result.evidence[0].text}”</blockquote>
+            <p>
+              A line you actually chose. Your character uses all 12 answers;
+              this is one scene, not the whole story.
+            </p>
+          </div>
+        )}
         <div className="trait-grid">
           {result.traits.map((t) => (
             <div className="trait-card" key={t.axis}>
@@ -247,7 +271,10 @@ export default function ResultView() {
         </div>
         <div className="next-links">
           <a href={`/play?pack=${result.packId}`}>
-            <RotateCcw size={18} /> Revisit my answers
+            <RotateCcw size={18} />{' '}
+            {result.evidence.length > 0
+              ? 'Revisit my answers'
+              : 'Play this episode'}
           </a>
           <a href="/#episodes">
             Try another episode <ArrowUpRight size={18} />

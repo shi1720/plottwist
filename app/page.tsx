@@ -1,99 +1,96 @@
-import { ArrowUpRight, Play, Sparkles, MoveRight, Radio } from 'lucide-react';
+import { ArrowUpRight, Play, MoveRight, Sparkles } from 'lucide-react';
+import { Header, Footer, CharacterArt } from '@/components/plot/chrome';
+import { CHARACTERS } from '@/lib/content/characters';
+import { CHARACTER_STORIES } from '@/lib/content/stories';
 export default function Home() {
   return (
     <>
-      <header className="site-header">
-        <a className="wordmark" href="/">
-          plot<span>twist</span>
-          <span className="logo-dot">✳</span>
-        </a>
-        <nav>
-          <a href="#episodes">The episodes</a>
-          <a href="#cast">The cast</a>
-          <a href="/about">
-            Behind the scenes <ArrowUpRight size={15} />
-          </a>
-        </nav>
-        <a className="small-button" href="/play?pack=pilot">
-          Find my character <ArrowUpRight size={16} />
-        </a>
-      </header>
+      <Header />
       <main>
-        <section className="hero">
+        <section className="hero season-two">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="live-dot" /> NOW CASTING: YOU
+              <span className="live-dot" /> A 3-MINUTE PERSONALITY QUIZ
             </p>
             <h1>
               Your life.
               <br />
-              Questionable
+              But make it
               <br />
-              <em>casting.</em>
-              <span className="asterisk">✳</span>
+              <em>a sitcom.</em>
             </h1>
             <p className="hero-description">
-              Main character? Lovable menace? The one who brings a spreadsheet
-              to brunch? Let’s find out.
+              Play through 12 everyday dilemmas. Find out which of our 16
+              original sitcom characters you are—and what happens when your
+              friends join the cast.
             </p>
             <a className="primary-button" href="/play?pack=pilot">
-              <Play size={18} fill="currentColor" /> Meet your alter ego{' '}
+              <Play size={18} fill="currentColor" /> Find my character{' '}
               <MoveRight size={22} />
             </a>
             <p className="micro-copy">
-              12 little dilemmas. 16 possible yous. Zero existential guarantees.
+              No sign-up. Just you and some revealing dinner plans.
             </p>
             <div className="hero-foot">
-              <span>~ 3 MINUTES</span>
-              <span>NO SIGN-UP</span>
-              <span>JUST A LITTLE TOO ACCURATE</span>
+              <span>12 SCENES</span>
+              <span>16 CHARACTERS</span>
+              <span>ONE QUESTIONABLE ENSEMBLE</span>
             </div>
           </div>
-          <div className="hero-art">
-            <div className="art-topline">
-              <span>THE PERSONALITY SITCOM</span>
-              <Radio size={20} />
+          <div className="casting-stage">
+            <div className="stage-topline">
+              <span>TONIGHT’S EPISODE</span>
+              <span>01 / THE PILOT</span>
             </div>
-            <img
-              className="cast-art"
-              src="/cast-ensemble.webp"
-              alt="An orange star, lavender cloud, yellow flower and mint square: our delightfully chaotic ensemble cast"
-              width="1536"
-              height="1024"
-            />
-            <div className="art-caption">
-              <span>A very unofficial study of being you.</span>
-              <span>VOL. 001 ↗</span>
-            </div>
-            <div className="sticker">
-              100%
+            <h2>
+              Six friends.
               <br />
-              <em>
-                main character
-                <br />
-                energy
-              </em>
+              Zero reservations.
+            </h2>
+            <p>
+              Someone has a backup. Someone has a theory.
+              <br />
+              Someone has already ordered karaoke.
+            </p>
+            <div className="stage-cast">
+              {['0110', '1001', '0000'].map((code) => {
+                const c = CHARACTERS.find((c) => c.code === code)!;
+                return (
+                  <a
+                    href={`/cast/${code}`}
+                    className={`stage-character ${c.color}`}
+                    key={code}
+                  >
+                    <CharacterArt code={code} eager />
+                    <span>{c.name.replace('The ', '')}</span>
+                  </a>
+                );
+              })}
+            </div>
+            <div className="stage-punchline">
+              <span>YOUR ROLE?</span>
+              <strong>That’s what we’re here to find out.</strong>
+              <ArrowUpRight size={22} />
             </div>
           </div>
         </section>
         <div className="ticker">
           <span>GOOD INTENTIONS. INTERESTING DECISIONS.</span>
           <Sparkles size={21} />
-          <span>A LITTLE SELF-DISCOVERY. A LOT OF PLOT.</span>
+          <span>EVERY FRIEND GROUP IS A WRITERS’ ROOM.</span>
           <Sparkles size={21} />
-          <span>YOUR LORE STARTS HERE.</span>
-          <Sparkles size={21} />
+          <span>YOU’RE IN THE CREDITS.</span>
         </div>
         <section className="episodes section" id="episodes">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">PICK YOUR PILOT</p>
-              <h2>Same you. Different chaos.</h2>
+              <p className="eyebrow">CHOOSE YOUR EPISODE</p>
+              <h2>Same you. Different stakes.</h2>
             </div>
             <p>
-              Choose your scene. Follow your instincts.
+              Each is a complete 12-scene quiz.
               <br />
-              Try not to overthink the group chat.
+              Pick the situation that knows you best.
             </p>
           </div>
           <div className="episode-grid">
@@ -101,29 +98,32 @@ export default function Home() {
               {
                 n: '01',
                 title: 'The pilot episode',
-                desc: 'A group chat. A dinner party. A perfectly normal identity crisis.',
-                tag: 'THE ORIGINAL',
+                desc: 'The group chat wakes up. The weekend falls apart. Someone steals your oat milk.',
+                tag: 'START HERE',
                 color: 'peach',
                 pack: 'pilot',
                 icon: '✳',
+                line: '“Did anyone actually book the table?”',
               },
               {
                 n: '02',
                 title: 'Out of office',
-                desc: 'Reply-all disasters and meetings that could have been a nap.',
+                desc: 'A canceled meeting gives you hope. A moved deadline immediately takes it back.',
                 tag: 'WORKPLACE COMEDY',
                 color: 'lilac',
                 pack: 'office',
                 icon: '↗',
+                line: '“Quick sync” is how the trouble starts.',
               },
               {
                 n: '03',
                 title: 'The group chat',
-                desc: 'Unread messages. Unhinged plans. Your people, in all their glory.',
+                desc: 'One voice note becomes a weekend away. Three extra people become your problem.',
                 tag: 'FRIENDSHIP LORE',
                 color: 'green',
                 pack: 'friends',
                 icon: '✺',
+                line: '“Who added these people?”',
               },
             ].map((e) => (
               <a
@@ -135,9 +135,12 @@ export default function Home() {
                   <span>{e.tag}</span>
                   <span>EP. {e.n}</span>
                 </div>
-                <div className="episode-symbol">{e.icon}</div>
+                <div className="episode-symbol" aria-hidden="true">
+                  {e.icon}
+                </div>
                 <h3>{e.title}</h3>
                 <p>{e.desc}</p>
+                <p className="episode-line">{e.line}</p>
                 <div className="card-bottom">
                   <span>12 SCENES · ~3 MIN</span>
                   <ArrowUpRight size={24} />
@@ -146,23 +149,38 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="cast-teaser section" id="cast">
-          <p className="eyebrow">AN ENSEMBLE OF ABSOLUTE INDIVIDUALS</p>
-          <h2>16 characters. No background extras.</h2>
-          <a className="text-link" href="/cast">
-            Meet the whole cast <ArrowUpRight size={20} />
-          </a>
+        <section className="cast-preview section" id="cast">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">A FEW PEOPLE YOU MIGHT BE</p>
+              <h2>Recognize anyone?</h2>
+            </div>
+            <a className="text-link" href="/cast">
+              Meet all 16 characters <ArrowUpRight size={20} />
+            </a>
+          </div>
+          <div className="preview-cast-grid">
+            {['0100', '0101', '1010', '1100'].map((code) => {
+              const c = CHARACTERS.find((c) => c.code === code)!;
+              return (
+                <a
+                  className={`preview-cast-card ${c.color}`}
+                  href={`/cast/${code}`}
+                  key={code}
+                >
+                  <CharacterArt code={code} />
+                  <div>
+                    <h3>{c.name}</h3>
+                    <p>{CHARACTER_STORIES[code].entrance}</p>
+                  </div>
+                  <ArrowUpRight size={20} />
+                </a>
+              );
+            })}
+          </div>
         </section>
       </main>
-      <footer>
-        <a className="wordmark" href="/">
-          plot<span>twist</span>✳
-        </a>
-        <p>For the plot. Not a psychological assessment.</p>
-        <a href="/about">
-          How it works <ArrowUpRight size={16} />
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 }

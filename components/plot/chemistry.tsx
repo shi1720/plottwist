@@ -70,7 +70,7 @@ export default function Chemistry() {
                 ))}
               </SelectContent>
             </Select>
-            <CharacterArt family={c.family} />
+            <CharacterArt code={c.code} />
             <p>{c.tagline}</p>
           </section>
         ))}

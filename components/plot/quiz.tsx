@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { EPISODE_ARCS } from '@/lib/content/stories';
 import { getPack, isPackId } from '@/lib/content/packs';
 import { encodeResult } from '@/lib/engine/sharing';
 import { parseSession, STORAGE_KEY } from '@/lib/engine/storage';
@@ -91,6 +92,9 @@ export default function Quiz() {
     },
     [scene, cursor],
   );
+  const actIndex = Math.floor(cursor / 4);
+  const arc = EPISODE_ARCS[packId][actIndex];
+  const reaction = scene.choices.find((c) => c.id === selected)?.reaction;
   const next = useCallback(() => {
     if (!selected) return;
     if (cursor === pack.scenes.length - 1) {
@@ -158,9 +162,22 @@ export default function Quiz() {
           <div className="eyebrow">YOUR CURRENT STORY</div>
           <h2>{pack.title}</h2>
           <p>{pack.subtitle}</p>
-          <div className="sidebar-symbol">
-            {packId === 'pilot' ? '✳' : packId === 'office' ? '↗' : '✺'}
-          </div>
+          <ol className="act-list" aria-label="Episode story arc">
+            {EPISODE_ARCS[packId].map((act, i) => (
+              <li
+                key={act.title}
+                aria-current={i === actIndex ? 'step' : undefined}
+                className={i < actIndex ? 'act-complete' : ''}
+              >
+                <span>{i < actIndex ? <Check size={16} /> : `0${i + 1}`}</span>
+                <div>
+                  <small>ACT {i + 1}</small>
+                  <strong>{act.title}</strong>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="act-note">{arc.note}</p>
           <div className="sidebar-note">
             There are no right answers.
             <br />
@@ -174,6 +191,12 @@ export default function Quiz() {
           </div>
         </aside>
         <section className="scene-panel" aria-label="Quiz scene">
+          <div className="mobile-act-story">
+            <p className="eyebrow">
+              ACT {actIndex + 1} · {arc.title}
+            </p>
+            <p>{arc.note}</p>
+          </div>
           <div className="progress-label">
             <span>SCENE {String(cursor + 1).padStart(2, '0')}</span>
             <span>
@@ -190,7 +213,9 @@ export default function Quiz() {
             </p>
           )}
           <div className="scene-heading">
-            <p className="eyebrow">{scene.setting}</p>
+            <p className="eyebrow">
+              ACT {actIndex + 1} · {scene.setting}
+            </p>
             <h1 ref={heading} tabIndex={-1}>
               {scene.title}
             </h1>
@@ -218,6 +243,17 @@ export default function Quiz() {
               </label>
             ))}
           </RadioGroup>
+          <div
+            className={`director-reaction ${reaction ? 'has-reaction' : ''}`}
+            role="status"
+            aria-live="polite"
+          >
+            <span>{reaction ? 'FROM THE WRITERS’ ROOM' : 'YOUR LINE'}</span>
+            <p>
+              {reaction ??
+                'Choose what you’d actually do. We can work with that.'}
+            </p>
+          </div>
           <div className="scene-actions">
             <button
               className="icon-text"

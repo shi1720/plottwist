@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Search } from 'lucide-react';
+import { CHARACTER_STORIES } from '@/lib/content/stories';
 import { CHARACTERS } from '@/lib/content/characters';
 import { CharacterArt } from './chrome';
 export default function Cast() {
@@ -8,26 +9,49 @@ export default function Cast() {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   const characters = CHARACTERS.filter((c) =>
-    `${c.name} ${c.tags.join(' ')}`.toLowerCase().includes(query.toLowerCase()),
+    `${c.name} ${c.tags.join(' ')} ${CHARACTER_STORIES[c.code].entrance} ${CHARACTER_STORIES[c.code].prop}`
+      .toLowerCase()
+      .includes(query.toLowerCase()),
   );
   return (
     <main className="cast-page">
-      <div className="page-intro">
-        <p className="eyebrow">THE CASTING DEPARTMENT</p>
-        <h1>
-          16 characters.
-          <br />
-          <em>No background extras.</em>
-        </h1>
-        <p>
-          Every group has a lovable menace. A quiet mastermind. Someone with
-          snacks.
-          <br />
-          Which part were you born to play?
-        </p>
+      <div className="cast-opening">
+        <div>
+          <p className="eyebrow">THE CAST · 16 ORIGINAL CHARACTERS</p>
+          <h1>
+            One dinner plan.
+            <br />
+            <em>Sixteen ways to derail it.</em>
+          </h1>
+          <p>
+            The reservation is gone. The group chat is typing.
+            <br />
+            Meet the people who turn a minor inconvenience into a season finale.
+          </p>
+          <a className="text-link" href="/play?pack=pilot">
+            Which one are you? Take the quiz <ArrowUpRight size={19} />
+          </a>
+        </div>
+        <aside className="cold-open-script" aria-label="The opening scene">
+          <span className="script-label">
+            COLD OPEN / EXT. RESTAURANT / 7:03 PM
+          </span>
+          <p>
+            <strong>THE SAGE</strong> I have a backup reservation.
+          </p>
+          <p>
+            <strong>THE MENACE</strong> I have a better idea.
+          </p>
+          <p>
+            <strong>THE DETECTIVE</strong> Those are famously different things.
+          </p>
+          <span className="script-cut">[ cue theme music ]</span>
+        </aside>
       </div>
       <div className="cast-toolbar">
-        <span>{characters.length} CHARACTERS IN THE ENSEMBLE</span>
+        <span role="status">
+          {characters.length} CHARACTERS IN THE ENSEMBLE
+        </span>
         <label className="search-field">
           <Search size={18} />
           <input
@@ -52,11 +76,12 @@ export default function Cast() {
               </span>
               <ArrowUpRight size={19} />
             </div>
-            <CharacterArt family={c.family} />
+            <CharacterArt code={c.code} />
             <h2>{c.name}</h2>
-            <p>{c.tagline}</p>
+            <p>{CHARACTER_STORIES[c.code].entrance}</p>
             <div className="cast-card-tags">
-              {c.tags.slice(0, 2).join(' · ')}
+              <span>CARRIES</span>
+              {CHARACTER_STORIES[c.code].prop}
             </div>
           </a>
         ))}

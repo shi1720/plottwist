@@ -215,3 +215,77 @@ test('playing sends no answer payload to the scoring API', async ({ page }) => {
   await page.getByRole('button', { name: 'Next scene' }).click();
   expect(calls).toEqual([]);
 });
+
+test('all sixteen cast portraits load and character fiction follows the selected identity', async ({
+  page,
+}) => {
+  await page.goto('/cast');
+  const portraits = page.locator('.cast-card img.character-art');
+  await expect(portraits).toHaveCount(16);
+  const sources = new Set<string>();
+  for (const portrait of await portraits.all()) {
+    await portrait.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() =>
+        portrait.evaluate(
+          (img: HTMLImageElement) => img.complete && img.naturalWidth > 0,
+        ),
+      )
+      .toBe(true);
+    sources.add((await portrait.getAttribute('src'))!);
+  }
+  expect(sources.size).toBe(16);
+  await page.goto('/cast/0101');
+  await expect(page.locator('.character-cold-open')).toContainText(
+    'who invented the fork',
+  );
+  await expect(page.locator('.result-poster img')).toHaveAttribute(
+    'src',
+    '/characters/0101.webp',
+  );
+});
+
+test('answer reactions and three-act progression follow actual selections', async ({
+  page,
+}) => {
+  await page.goto('/play?pack=pilot');
+  await page.getByRole('radio').first().check();
+  await expect(page.locator('.director-reaction')).toContainText(
+    'notification takes a personal day',
+  );
+  await page.getByRole('radio').nth(1).check();
+  await expect(page.locator('.director-reaction')).toContainText(
+    'exclusive comedy tour',
+  );
+  for (let i = 0; i < 4; i++) {
+    await page.getByRole('radio').first().check();
+    await page.getByRole('button', { name: 'Next scene' }).click();
+  }
+  await expect(page.locator('.scene-heading .eyebrow')).toContainText('ACT 2');
+});
+
+test('shared results offer play rather than claiming saved answers, with navigation available', async ({
+  page,
+}) => {
+  await page.goto('/result?r=v1.pilot.5_-3_1_-5');
+  await expect(
+    page.getByRole('link', { name: 'Play this episode', exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'Revisit my answers', exact: true }),
+  ).toHaveCount(0);
+  await expect(
+    page
+      .getByRole('navigation', { name: 'Main navigation' })
+      .getByRole('link', { name: 'The cast', exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole('navigation', { name: 'Main navigation' })
+    .getByRole('link', { name: 'The cast', exact: true })
+    .click();
+  await page
+    .getByRole('textbox', { name: 'Search characters' })
+    .fill('biscuit');
+  await expect(page.locator('.cast-card')).toHaveCount(1);
+  await expect(page.locator('.cast-card')).toContainText('The Cozy Enigma');
+});
