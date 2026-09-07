@@ -4,16 +4,15 @@ export function Header() {
   return (
     <header className="site-header">
       <a className="wordmark" href="/" aria-label="Plot Twist home">
-        plot<span>twist</span>
-        <span className="logo-dot">✳</span>
+        Plot <span>Twist</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="/#episodes">The episodes</a>
-        <a href="/cast">The cast</a>
-        <a href="/chemistry">Cast chemistry</a>
+        <a href="/#episodes">Episodes</a>
+        <a href="/cast">Characters</a>
+        <a href="/chemistry">Compare characters</a>
       </nav>
       <a className="small-button" href="/play?pack=pilot">
-        Find my character <ArrowUpRight size={16} />
+        Take the quiz <ArrowUpRight size={16} />
       </a>
     </header>
   );
@@ -22,11 +21,11 @@ export function Footer() {
   return (
     <footer>
       <a className="wordmark" href="/">
-        plot<span>twist</span>✳
+        Plot <span>Twist</span>
       </a>
-      <p>For the plot. Not a psychological assessment.</p>
+      <p>A personality quiz for fun, not a psychological assessment.</p>
       <a href="/about">
-        Behind the scenes <ArrowUpRight size={16} />
+        About & privacy <ArrowUpRight size={16} />
       </a>
     </footer>
   );

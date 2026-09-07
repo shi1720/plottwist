@@ -43,3 +43,19 @@ The initial release reused four illustrated families to keep transfer size small
 **Reason:** visual identity is part of the product, not interchangeable decoration. Keeping narrative presentation outside the frozen scoring contract allows copy improvements without breaking existing shared links.
 
 **Tradeoff:** more total image bytes and requests (roughly 22–35 KB per portrait). Intrinsic dimensions prevent layout shifts; offscreen gallery images load lazily. The story is authored character fiction, not an LLM-generated psychological inference. The result explicitly labels it as fiction, while a separate local-only callback quotes a real selected answer.
+
+## ADR-007: clear navigation with humor in the content
+
+**Decision:** use plain action labels, a direct opening explanation, restrained typography and color, and an open character gallery. Preserve the distinct portraits and authored reactions; make longer fiction optional.
+
+**Reason:** the earlier presentation gave jokes, decorative marks, and useful information similar emphasis. The independent editorial review found that this weakened clarity. Humor works better when a visitor first understands the situation and the action available.
+
+**Tradeoff:** less visual spectacle. A qualitative review improved from 52.5 to 82/100 using the same rubric, but this is not evidence of measured conversion or usability gains. See [the editorial review](EDITORIAL_REVIEW.md).
+
+## ADR-008: bind local evidence to a save revision
+
+**Decision:** personal receipts require the public token, a tab-local nonce, and an opaque revision matching the saved episode. Generated sharing links omit the local nonce. Store no duplicate answer history in the result context.
+
+**Reason:** coarsened tokens intentionally collide. Matching one to saved answers cannot prove that those answers produced this specific result. An early exact-answer fingerprint fixed the collision but duplicated erasable answers in sessionStorage; review rejected that approach. Random revision identifiers establish the association without another answer copy.
+
+**Tradeoff:** any subsequent quiz save invalidates an older result’s receipts, even a cursor-only change. The character summary stays available, and completing the quiz again restores local evidence. Identifiers are local provenance, not cryptographic authentication. Browsers blocking storage can still play and view the public summary.

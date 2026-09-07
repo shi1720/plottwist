@@ -2,7 +2,7 @@
   {
     "id": "pilot",
     "title": "The pilot episode",
-    "subtitle": "A perfectly normal identity crisis.",
+    "subtitle": "Everyday decisions, at home and with friends.",
     "color": "peach",
     "scenes": [
       {
@@ -394,7 +394,7 @@
   {
     "id": "office",
     "title": "Out of office",
-    "subtitle": "Meetings that could have been a nap.",
+    "subtitle": "Decisions about work, deadlines, and the people on your team.",
     "color": "lilac",
     "scenes": [
       {
@@ -786,7 +786,7 @@
   {
     "id": "friends",
     "title": "The group chat",
-    "subtitle": "Your people. All their glorious nonsense.",
+    "subtitle": "Plans, small disagreements, and the friends who know you best.",
     "color": "green",
     "scenes": [
       {

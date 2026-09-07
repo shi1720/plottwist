@@ -1,5 +1,7 @@
 # LLM design-judge review
 
+The later [2026-09-07 editorial review](EDITORIAL_REVIEW.md) evaluates the redesigned release under a new frozen rubric. The scores below are historical and should not be compared directly across rubrics.
+
 Reviewed on **2026-09-05** after the user reported repeated character art and asked for a clearer, funnier, more story-driven experience.
 
 ## Method and rubric

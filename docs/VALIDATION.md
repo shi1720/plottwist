@@ -1,5 +1,18 @@
 # Release validation
 
+## Editorial redesign — 2026-09-07
+
+- **41 unit/property/API/differential/content tests pass** across six files; strict TypeScript and lint pass. Scoring/API coverage remains 95.52% statements, 93.63% branches, 100% functions, 96.52% lines. This does not measure UI coverage.
+- **38 browser tests pass against the production Worker**, in desktop and mobile Chromium. All three complete quizzes, resume/revision, sixteen portraits, error states, keyboard controls, comparison, and local storage behavior are covered.
+- New regressions exercise the actual clipboard link, coarse-token collisions, cross-tab answer edits, clearing an open result, and a session context with no duplicate answer history.
+- PNG download checks verify the PNG signature and 1080 × 1350 dimensions; an exported card was also visually inspected.
+- Automated accessibility scans cover home, quiz, result, cast, comparison and privacy with WCAG 2 A/AA and 2.1 AA rules; no reported violations in these scans.
+- Production build succeeds. Three evaluation baselines fail, three golden solutions pass, and two negative regressions fail as expected. Dependency audit reports **zero vulnerabilities** at validation time.
+- Twelve desktop/mobile production renders reviewed. An independent LLM editorial judge scored the design **82/100**, up from **52.5/100** under the same rubric; a separate code reviewer found no remaining blocking issue after the provenance fixes. [Full review and caveats](EDITORIAL_REVIEW.md).
+- Documentation now describes opaque save revisions, generic shared summaries, and conservative invalidation of old personal receipts. Longer fiction is optional and the interface uses plain labels.
+
+The sections below preserve historical release evidence; their earlier visual descriptions and test counts are superseded by this entry.
+
 ## Character and storytelling update — 2026-09-05
 
 Executed after the first release, against the revised production Worker:

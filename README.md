@@ -1,10 +1,10 @@
 <div align="center">
 
-# Plot Twist ✳
+# Plot Twist
 
-### Your life. But make it a sitcom.
+### Who are you in the group chat?
 
-A personality sitcom for people who bring a spreadsheet to brunch—or cause the spreadsheet to exist.
+Twelve everyday questions. Sixteen original characters. A personality quiz for fun.
 
 [Play Plot Twist](https://plottwist.sg127977958.chatgpt.site) · [Meet the cast](https://plottwist.sg127977958.chatgpt.site/cast) · [Architecture](docs/ARCHITECTURE.md) · [Engineering evaluations](evaluation/README.md)
 
@@ -21,9 +21,9 @@ A personality sitcom for people who bring a spreadsheet to brunch—or cause the
 
 ## The pitch
 
-The internet has enough ways to rank you. **Plot Twist turns everyday dilemmas into an original sitcom character**, then gives you the receipts. Play a three-minute episode, meet your alter ego, save a character card, and mix two characters to discover your fictional sitcom dynamic.
+**Plot Twist turns everyday decisions into a character you might recognize.** Are you the person who makes the plans, keeps everyone comfortable, or changes the destination halfway there? Answer 12 questions about everyday life, work, or friends. See how your answers shaped your character, download a card, or compare two fictional characters.
 
-Warm comedy instead of a judgment score. Explainable rules instead of an opaque personality label. No signup, AI API bill, advertising tracker, or required database.
+The humor comes from specific situations and character writing. Scoring follows inspectable rules, and ordinary play keeps answers in the browser. No account or external AI service is required.
 
 **This is entertainment, not MBTI, an official 16Personalities product, psychometrics, or relationship advice.** All character names and scenes are original.
 
@@ -31,7 +31,7 @@ Warm comedy instead of a judgment score. Explainable rules instead of an opaque 
 
 - **Three complete episodes:** The Pilot Episode, Out of Office, and The Group Chat. 36 original scenes, 144 choices.
 - **16 uniquely illustrated, reachable archetypes:** individual silhouettes, props, character scenes and portraits used consistently throughout the app. Every character is attainable in every episode.
-- **A sitcom that talks back:** three acts per episode and 144 choice-specific comedy reactions, plus a fictional cold open for each result.
+- **Situations with personality:** 144 choice-specific reactions, readable progress through three sections, and optional character fiction after the result.
 - **Explainable results:** four tendencies, a character brief, affectionate roast, strength, growth prompt, and local answer receipts.
 - **Reliable play:** keyboard-accessible choices, previous/next navigation, answer revision, per-episode resume, restart, corrupt-storage recovery, and cross-tab clear-data handling.
 - **Privacy-conscious sharing:** versioned links carry four coarse tendencies, never an answer history. Strong values are capped before sharing so an extreme score does not reveal all three underlying answers.
@@ -77,17 +77,17 @@ The browser suite has desktop and mobile Chromium projects. CI runs it against t
 
 The application deliberately keeps its scoring algorithm small. The engineering depth lives in **contracts, failure behavior, privacy, reproducibility, and verification**:
 
-| Concern                  | Implementation                                                           | Evidence                                                |
-| ------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------- |
-| Correct scoring          | Pure TypeScript core; canonical IDs; runtime validation                  | Seeded property tests; all 16 archetypes reachable      |
-| Independent verification | Python reference implementation                                          | 300 complete/partial cross-language fixtures            |
-| User revisions           | Answers are source of truth; scores are recomputed                       | Browser edit/reload trace and regression tests          |
-| Untrusted input          | Strict link grammar, storage parser, 8 KiB streamed body bound           | Malformed, oversized, duplicate, foreign, sparse inputs |
-| Privacy                  | Local play, coarse aggregate sharing, cross-tab deletion                 | Extreme-score regression and two-tab browser test       |
-| Performance              | Linear catalog indexing, 22–35 KB individual WebPs, lazy card generation | Operation-count evaluation; reproducible microbenchmark |
-| Reproducible repair      | Hashed task fixtures and clean candidate execution                       | Failing baseline → passing golden solution              |
+| Concern                  | Implementation                                                           | Evidence                                                     |
+| ------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| Correct scoring          | Pure TypeScript core; canonical IDs; runtime validation                  | Seeded property tests; all 16 archetypes reachable           |
+| Independent verification | Python reference implementation                                          | 300 complete/partial cross-language fixtures                 |
+| User revisions           | Answers are source of truth; scores are recomputed                       | Browser edit/reload trace and regression tests               |
+| Untrusted input          | Strict link grammar, storage parser, 8 KiB streamed body bound           | Malformed, oversized, duplicate, foreign, sparse inputs      |
+| Privacy                  | Local play, coarse aggregate sharing, cross-tab deletion                 | Coarse-token collision, clipboard, and cross-tab regressions |
+| Performance              | Linear catalog indexing, 22–35 KB individual WebPs, lazy card generation | Operation-count evaluation; reproducible microbenchmark      |
+| Reproducible repair      | Hashed task fixtures and clean candidate execution                       | Failing baseline → passing golden solution                   |
 
-See [validation evidence](docs/VALIDATION.md) for actual results and boundaries, [the role-focused walkthrough](docs/PORTFOLIO.md), [the design-judge rubric](docs/DESIGN_REVIEW.md), and [the review log](docs/REVIEW.md) for issues found and fixed during independent review.
+See [validation evidence](docs/VALIDATION.md) for actual results and boundaries, [the role-focused walkthrough](docs/PORTFOLIO.md), [the latest editorial judge report](docs/EDITORIAL_REVIEW.md), and [the review log](docs/REVIEW.md) for issues found and fixed during independent review.
 
 ## Repository map
 
@@ -108,7 +108,7 @@ docs/                   Architecture, decisions, operations, evidence, pitch
 
 The app produces a Cloudflare-compatible Worker with static assets. [Deployment instructions](docs/DEPLOYMENT.md) cover hosted publishing, local production smoke tests, rollback, and health checks. `.openai/hosting.json` identifies this instance; a fork must register its own Site or use its own Cloudflare configuration.
 
-No database, login, multiplayer room, analytics pipeline, or external AI is pretending to exist. Sharing is public to anyone with the link, not encrypted or revocable. Browser storage can be cleared by the user or browser. Ordinary hosting request logs may include URLs. The optional local evaluation runner executes **trusted Python code, not sandboxed submissions**.
+The application has no accounts, database, analytics pipeline, or external AI dependency. Sharing is public to anyone with the link, not encrypted or revocable. Browser storage can be cleared by the user or browser. Ordinary hosting request logs may include URLs. The optional local evaluation runner executes **trusted Python code, not sandboxed submissions**.
 
 Vinext is currently a beta framework dependency. This repository is a tested deployable release, not a claim of long-running production scale, scientific validation, or an operational SLA.
 

@@ -1,179 +1,120 @@
-import { ArrowUpRight, Play, MoveRight, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Header, Footer, CharacterArt } from '@/components/plot/chrome';
 import { CHARACTERS } from '@/lib/content/characters';
-import { CHARACTER_STORIES } from '@/lib/content/stories';
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <section className="hero season-two">
-          <div className="hero-copy">
-            <p className="eyebrow">
-              <span className="live-dot" /> A 3-MINUTE PERSONALITY QUIZ
-            </p>
+      <main id="main-content">
+        <section className="home-opening">
+          <div className="home-intro">
+            <p className="eyebrow">A personality quiz, for fun</p>
             <h1>
-              Your life.
+              Who are you
               <br />
-              But make it
-              <br />
-              <em>a sitcom.</em>
+              in the <em>group chat?</em>
             </h1>
-            <p className="hero-description">
-              Play through 12 everyday dilemmas. Find out which of our 16
-              original sitcom characters you are—and what happens when your
-              friends join the cast.
+            <p className="home-description">
+              The one who makes the plans? The one who changes them? Answer 12
+              everyday questions and meet your match among 16 original
+              characters.
             </p>
             <a className="primary-button" href="/play?pack=pilot">
-              <Play size={18} fill="currentColor" /> Find my character{' '}
-              <MoveRight size={22} />
+              Take the quiz <ArrowRight size={19} />
             </a>
-            <p className="micro-copy">
-              No sign-up. Just you and some revealing dinner plans.
-            </p>
-            <div className="hero-foot">
-              <span>12 SCENES</span>
-              <span>16 CHARACTERS</span>
-              <span>ONE QUESTIONABLE ENSEMBLE</span>
-            </div>
+            <p className="home-details">About 3 minutes · No account needed</p>
           </div>
-          <div className="casting-stage">
-            <div className="stage-topline">
-              <span>TONIGHT’S EPISODE</span>
-              <span>01 / THE PILOT</span>
+          <a className="featured-character" href="/cast/0110">
+            <span className="feature-kicker">Meet one of the characters</span>
+            <CharacterArt code="0110" eager />
+            <div className="feature-caption">
+              <div>
+                <span>07 / 16</span>
+                <h2>The Spreadsheet Sage</h2>
+                <p>“I made a quick sheet.”</p>
+              </div>
+              <ArrowUpRight size={24} />
             </div>
-            <h2>
-              Six friends.
-              <br />
-              Zero reservations.
-            </h2>
-            <p>
-              Someone has a backup. Someone has a theory.
-              <br />
-              Someone has already ordered karaoke.
-            </p>
-            <div className="stage-cast">
-              {['0110', '1001', '0000'].map((code) => {
-                const c = CHARACTERS.find((c) => c.code === code)!;
-                return (
-                  <a
-                    href={`/cast/${code}`}
-                    className={`stage-character ${c.color}`}
-                    key={code}
-                  >
-                    <CharacterArt code={code} eager />
-                    <span>{c.name.replace('The ', '')}</span>
-                  </a>
-                );
-              })}
-            </div>
-            <div className="stage-punchline">
-              <span>YOUR ROLE?</span>
-              <strong>That’s what we’re here to find out.</strong>
-              <ArrowUpRight size={22} />
-            </div>
-          </div>
+          </a>
         </section>
-        <div className="ticker">
-          <span>GOOD INTENTIONS. INTERESTING DECISIONS.</span>
-          <Sparkles size={21} />
-          <span>EVERY FRIEND GROUP IS A WRITERS’ ROOM.</span>
-          <Sparkles size={21} />
-          <span>YOU’RE IN THE CREDITS.</span>
-        </div>
         <section className="episodes section" id="episodes">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">CHOOSE YOUR EPISODE</p>
-              <h2>Same you. Different stakes.</h2>
+              <p className="eyebrow">Three ways to play</p>
+              <h2>Choose your setting.</h2>
             </div>
             <p>
-              Each is a complete 12-scene quiz.
-              <br />
-              Pick the situation that knows you best.
+              Each quiz has 12 questions and the same 16 possible characters.
             </p>
           </div>
           <div className="episode-grid">
             {[
               {
+                id: 'pilot',
                 n: '01',
                 title: 'The pilot episode',
-                desc: 'The group chat wakes up. The weekend falls apart. Someone steals your oat milk.',
-                tag: 'START HERE',
-                color: 'peach',
-                pack: 'pilot',
-                icon: '✳',
-                line: '“Did anyone actually book the table?”',
+                subtitle: 'Everyday life',
+                description:
+                  'Dinner plans, small favors, and a roommate who keeps borrowing your oat milk.',
               },
               {
+                id: 'office',
                 n: '02',
                 title: 'Out of office',
-                desc: 'A canceled meeting gives you hope. A moved deadline immediately takes it back.',
-                tag: 'WORKPLACE COMEDY',
-                color: 'lilac',
-                pack: 'office',
-                icon: '↗',
-                line: '“Quick sync” is how the trouble starts.',
+                subtitle: 'At work',
+                description:
+                  'A canceled meeting, a tight deadline, and a colleague who needs your help.',
               },
               {
+                id: 'friends',
                 n: '03',
                 title: 'The group chat',
-                desc: 'One voice note becomes a weekend away. Three extra people become your problem.',
-                tag: 'FRIENDSHIP LORE',
-                color: 'green',
-                pack: 'friends',
-                icon: '✺',
-                line: '“Who added these people?”',
+                subtitle: 'With friends',
+                description:
+                  'Weekend trips, unsolicited advice, and three people nobody mentioned inviting.',
               },
             ].map((e) => (
               <a
-                className={`episode-card ${e.color}`}
-                key={e.n}
-                href={`/play?pack=${e.pack}`}
+                className="episode-card"
+                href={`/play?pack=${e.id}`}
+                key={e.id}
               >
-                <div className="card-top">
-                  <span>{e.tag}</span>
-                  <span>EP. {e.n}</span>
+                <span className="episode-number">{e.n}</span>
+                <div className="episode-title">
+                  <span>{e.subtitle}</span>
+                  <h3>{e.title}</h3>
                 </div>
-                <div className="episode-symbol" aria-hidden="true">
-                  {e.icon}
-                </div>
-                <h3>{e.title}</h3>
-                <p>{e.desc}</p>
-                <p className="episode-line">{e.line}</p>
-                <div className="card-bottom">
-                  <span>12 SCENES · ~3 MIN</span>
-                  <ArrowUpRight size={24} />
-                </div>
+                <p>{e.description}</p>
+                <ArrowRight size={24} />
               </a>
             ))}
           </div>
         </section>
-        <section className="cast-preview section" id="cast">
+        <section className="cast-preview section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">A FEW PEOPLE YOU MIGHT BE</p>
-              <h2>Recognize anyone?</h2>
+              <p className="eyebrow">The characters</p>
+              <h2>You probably know someone like this.</h2>
             </div>
             <a className="text-link" href="/cast">
-              Meet all 16 characters <ArrowUpRight size={20} />
+              Meet all 16 <ArrowRight size={18} />
             </a>
           </div>
           <div className="preview-cast-grid">
-            {['0100', '0101', '1010', '1100'].map((code) => {
+            {['0000', '0101', '1001'].map((code) => {
               const c = CHARACTERS.find((c) => c.code === code)!;
               return (
                 <a
-                  className={`preview-cast-card ${c.color}`}
-                  href={`/cast/${code}`}
+                  className="preview-cast-card"
                   key={code}
+                  href={`/cast/${code}`}
                 >
                   <CharacterArt code={code} />
-                  <div>
-                    <h3>{c.name}</h3>
-                    <p>{CHARACTER_STORIES[code].entrance}</p>
-                  </div>
-                  <ArrowUpRight size={20} />
+                  <h3>{c.name}</h3>
+                  <p>{c.tagline}</p>
+                  <span className="text-link">
+                    Meet this character <ArrowUpRight size={16} />
+                  </span>
                 </a>
               );
             })}

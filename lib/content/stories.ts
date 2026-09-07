@@ -135,45 +135,18 @@ export const characterArtPath = (code: string) => `/characters/${code}.webp`;
 
 export const EPISODE_ARCS = {
   pilot: [
-    {
-      title: 'Meet the main character',
-      note: 'A quiet group chat. Suspicious. Let’s establish your usual level of involvement.',
-    },
-    {
-      title: 'Complicate everything',
-      note: 'The cast gets bigger. The plans get worse. Your instincts get a speaking part.',
-    },
-    {
-      title: 'Earn the closing credits',
-      note: 'Good news, missing oat milk, a lost reservation. An extremely normal finale.',
-    },
+    { title: 'First impressions' },
+    { title: 'With other people' },
+    { title: 'Looking back' },
   ],
   office: [
-    {
-      title: 'Join the meeting',
-      note: 'The camera is on. The agenda is theoretical. What kind of colleague walks in?',
-    },
-    {
-      title: 'Move the deadline',
-      note: 'An offsite, a missed handoff, a rushed launch. The calendar has chosen violence.',
-    },
-    {
-      title: 'Ship the season finale',
-      note: 'Take the stage, make the call, define a good week. Then please log off.',
-    },
+    { title: 'At your desk' },
+    { title: 'Working together' },
+    { title: 'Making decisions' },
   ],
   friends: [
-    {
-      title: 'Open the group chat',
-      note: 'One voice note. Several questionable plans. A cast with absolutely no mute button.',
-    },
-    {
-      title: 'Add three extra people',
-      note: 'Plans cancel. Friends disagree. Somehow you are catering. Friendship has range.',
-    },
-    {
-      title: 'Keep the good ones',
-      note: 'New faces, big decisions, old rituals. The real plot was the people who stayed.',
-    },
+    { title: 'Making plans' },
+    { title: 'Spending time together' },
+    { title: 'Keeping in touch' },
   ],
 } as const;
