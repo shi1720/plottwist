@@ -43,3 +43,21 @@ next-env.d.ts
 *.tsbuildinfo
 __pycache__/
 *.pyc
+
+# Local credentials and generated work
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*credentials*.json
+*service-account*.json
+*.key
+.venv/
+venv/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+node_modules/
+*.log
