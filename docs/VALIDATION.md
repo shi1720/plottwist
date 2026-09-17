@@ -90,4 +90,4 @@ Hosted release status and CI are linked from the repository. Local results above
 
 ## Hosted release verification
 
-The [clean Linux GitHub Actions run](https://github.com/shi1720/plottwist/actions/runs/33969147148) passed the complete pipeline, including the production-Worker browser suite. The [public deployed app](https://plottwist.sg127977958.chatgpt.site) returned a successful health response and rendered without a sign-in gate in the browser. The initial registration URL redirects to the canonical deployed address.
+The [clean Linux GitHub Actions run](https://github.com/shi1720/plottwist/actions/runs/33969147148) passed the complete pipeline, including the production-Worker browser suite. The [public deployed app](https://plottwist-shi1720.web.app) returned a successful health response and rendered without a sign-in gate in the browser. The public entry point was subsequently moved to Firebase; see [Firebase verification](FIREBASE.md).
