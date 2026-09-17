@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Search } from 'lucide-react';
+import { CHARACTER_STORIES } from '@/lib/content/stories';
 import { CHARACTERS } from '@/lib/content/characters';
 import { CharacterArt } from './chrome';
 export default function Cast() {
@@ -8,33 +9,35 @@ export default function Cast() {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   const characters = CHARACTERS.filter((c) =>
-    `${c.name} ${c.tags.join(' ')}`.toLowerCase().includes(query.toLowerCase()),
+    `${c.name} ${c.tags.join(' ')} ${CHARACTER_STORIES[c.code].entrance} ${CHARACTER_STORIES[c.code].prop}`
+      .toLowerCase()
+      .includes(query.trim().toLowerCase()),
   );
   return (
-    <main className="cast-page">
-      <div className="page-intro">
-        <p className="eyebrow">THE CASTING DEPARTMENT</p>
-        <h1>
-          16 characters.
-          <br />
-          <em>No background extras.</em>
-        </h1>
+    <main id="main-content" className="cast-page">
+      <div className="cast-opening">
+        <p className="eyebrow">The cast</p>
+        <h1>Sixteen familiar faces.</h1>
         <p>
-          Every group has a lovable menace. A quiet mastermind. Someone with
-          snacks.
-          <br />
-          Which part were you born to play?
+          Some bring a plan. Some bring snacks. One has a question that will
+          take forty minutes to answer. Meet the characters behind the quiz.
         </p>
+        <a className="text-link" href="/play?pack=pilot">
+          Find your character <ArrowUpRight size={18} />
+        </a>
       </div>
       <div className="cast-toolbar">
-        <span>{characters.length} CHARACTERS IN THE ENSEMBLE</span>
+        <span role="status">
+          {characters.length}{' '}
+          {characters.length === 1 ? 'character' : 'characters'}
+        </span>
         <label className="search-field">
           <Search size={18} />
           <input
             disabled={!ready}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Find a character or a vibe…"
+            placeholder="Search by name or trait"
             aria-label="Search characters"
           />
         </label>
@@ -47,23 +50,22 @@ export default function Cast() {
             href={`/cast/${c.code}`}
           >
             <div className="card-top">
-              <span>
-                CAST № {String(parseInt(c.code, 2) + 1).padStart(2, '0')}
-              </span>
+              <span>{String(parseInt(c.code, 2) + 1).padStart(2, '0')}</span>
               <ArrowUpRight size={19} />
             </div>
-            <CharacterArt family={c.family} />
+            <CharacterArt code={c.code} />
             <h2>{c.name}</h2>
-            <p>{c.tagline}</p>
+            <p>{CHARACTER_STORIES[c.code].entrance}</p>
             <div className="cast-card-tags">
-              {c.tags.slice(0, 2).join(' · ')}
+              <span>Usually carries </span>
+              {CHARACTER_STORIES[c.code].prop}
             </div>
           </a>
         ))}
       </div>
       {characters.length === 0 && (
         <div className="empty-state">
-          <h2>No character answers to that name.</h2>
+          <h2>No matching characters.</h2>
           <p>Try “warm”, “quiet”, or “chaos”.</p>
           <button className="secondary-button" onClick={() => setQuery('')}>
             Show the whole cast
@@ -71,13 +73,9 @@ export default function Cast() {
         </div>
       )}
       <div className="cast-cta">
-        <h2>
-          Enough about them.
-          <br />
-          Let’s talk about you.
-        </h2>
+        <h2>Find out which one fits your answers.</h2>
         <a className="primary-button" href="/play?pack=pilot">
-          Find my character <ArrowUpRight size={20} />
+          Take the quiz <ArrowUpRight size={20} />
         </a>
       </div>
     </main>

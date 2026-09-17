@@ -1,3 +1,4 @@
+import { characterArtPath } from '../content/stories';
 import type { Character } from './types';
 /** Browser-native typography card: no external render service or user-data upload. */
 export async function downloadCard(
@@ -9,29 +10,25 @@ export async function downloadCard(
   canvas.height = 1350;
   const ctx = canvas.getContext('2d');
   if (!ctx) throw new Error('Canvas unavailable');
-  const colors = { peach: '#f0c7b5', lilac: '#ded1f0', green: '#d9e5ce' };
-  ctx.fillStyle = colors[character.color as keyof typeof colors] ?? '#f8f5ed';
+  ctx.fillStyle = '#fbf9f4';
   ctx.fillRect(0, 0, 1080, 1350);
   ctx.strokeStyle = '#24231f';
   ctx.lineWidth = 4;
   ctx.strokeRect(36, 36, 1008, 1278);
   ctx.fillStyle = '#24231f';
   ctx.font = 'bold 26px Arial';
-  ctx.fillText('OFFICIALLY UNOFFICIAL', 80, 100);
+  ctx.fillText('YOUR PLOT TWIST CHARACTER', 80, 100);
   ctx.textAlign = 'right';
   ctx.fillText(`CAST ${parseInt(character.code, 2) + 1}/16`, 1000, 100);
   ctx.textAlign = 'left';
   const image = new Image();
-  image.src = '/cast-ensemble.webp';
+  image.src = characterArtPath(character.code);
   await image.decode();
-  const x = { spark: 0, cloud: 400, flower: 740, square: 1120 }[
-    character.family
-  ];
-  ctx.drawImage(image, x, 150, 400, 750, 300, 155, 480, 610);
+  ctx.drawImage(image, 230, 160, 620, 620);
   ctx.fillStyle = '#24231f';
   ctx.font = 'bold 25px Arial';
-  ctx.fillText('YOU ARE', 80, 815);
-  ctx.font = 'bold 68px Arial';
+  ctx.fillText('YOUR CHARACTER', 80, 815);
+  ctx.font = '68px Georgia';
   let y = 900;
   const words = character.name.split(' ');
   let line = '';
@@ -55,11 +52,11 @@ export async function downloadCard(
   }
   ctx.fillText(line, 80, y);
   ctx.font = 'bold 48px Arial';
-  ctx.fillText('plottwist ✳', 80, 1245);
+  ctx.fillText('Plot Twist', 80, 1245);
   ctx.font = '20px Arial';
   ctx.textAlign = 'right';
   ctx.fillText(episode, 1000, 1220);
-  ctx.fillText('For the plot. Not a psychological assessment.', 1000, 1255);
+  ctx.fillText('A personality quiz, for fun.', 1000, 1255);
   const blob = await new Promise<Blob>((resolve, reject) =>
     canvas.toBlob(
       (b) => (b ? resolve(b) : reject(new Error('Card export failed'))),

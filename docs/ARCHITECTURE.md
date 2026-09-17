@@ -26,7 +26,7 @@ flowchart LR
 
 ### The answer set is authoritative
 
-A scene and choice have stable IDs. Each choice contains a four-element integer vector; shipped scenes measure one dimension at a time. UI state stores `{sceneId, choiceId}` records, a cursor, pack ID, and update time. It never stores independently mutable accumulated scores or a cached character.
+A scene and choice have stable IDs. Each choice contains a four-element integer vector; shipped scenes measure one dimension at a time. UI state stores `{sceneId, choiceId}` records, a cursor, pack ID, update time, and an opaque save revision. Older sessions without a revision still resume. It never stores independently mutable accumulated scores or a cached character.
 
 On revision, a choice replaces the existing record at the scene's canonical position. Future recorded answers remain available. A result always recomputes from current answers. This prevents a common class of additive-update/resume bugs.
 
@@ -56,7 +56,9 @@ v1.pilot.5_-3_1_-5
 
 Each component preserves its sign and caps absolute magnitude at 5: 5, 7, and 9 all serialize as 5. This retains the displayed tendency category while avoiding uniquely identifying all choices at an extreme. Individual choices and names are not serialized. Aggregate sharing still reveals tendencies; it is not encryption or a promise against all inference.
 
-The v1 decoder accepts valid odd values through 9 for explicit compatible input, but the application never generates ±7 or ±9 links. Directly typed links are unverified entertainment data, not proof someone completed an episode. Shared result displays have no answer receipts. A browser with a matching completed local episode can show its own more detailed evidence.
+The v1 decoder accepts valid odd values through 9 for explicit compatible input, but the application never generates ±7 or ±9 links. Directly typed links are unverified entertainment data, not proof someone completed an episode. Shared result displays have no answer receipts. More detailed evidence requires a completed local episode plus matching tab-local provenance: a random nonce in the local URL fragment, an opaque save revision, and the public token. The context lives in sessionStorage and contains no answer history. A generic shared link has no local fragment and never inherits this browser’s answers, even if two answer sets produce the same coarse token. Clipboard sharing strips the local fragment.
+
+Every quiz save receives a fresh UUID revision. Completing a quiz explicitly saves the final episode and the matching result context before navigation. Any later save, including reopening the quiz or changing its cursor, conservatively invalidates the older result’s receipts. Revealing the result again restores them. Storage deletion or revision events make already-open results fall back to the public summary. These identifiers associate browser state; they are not authentication or a security boundary.
 
 A frozen contract hash test detects changes to IDs/weights/character mapping. There is no silent server data migration because there is no server data store.
 
@@ -70,7 +72,7 @@ Concurrent edits to the same episode use last-writer-wins local storage; this is
 
 React 19 runs through Vinext/Vite into a Cloudflare Worker. Server routes render the shell and catalog; client components initialize browser-only state after hydration. Native anchors intentionally start a fresh route document, making URL-derived state initialization and local resume predictable. This trades some SPA navigation speed for a simpler lifecycle.
 
-Base UI/Shadcn radio, progress, and select primitives provide interactive semantics. Custom CSS implements the retro print palette and responsive layouts. One compressed WebP atlas is reused for the ensemble and four mascot families; the 16 characters are distinguished by text and code rather than falsely claiming 16 unique illustrations.
+Base UI/Shadcn radio, progress, and select primitives provide interactive semantics. Custom CSS uses restrained cream and forest colors, serif editorial headings, hairline dividers, and responsive layouts. Sixteen individual 640 × 640 WebP portraits map to frozen character codes through `characterArtPath`. Cast, detail, home, chemistry, result, and Canvas export use this same mapping. Presentation-only `stories.ts` supplies optional original character fiction and three plain-language quiz sections; choice reactions live beside existing choices. These copy and artwork changes do not change the v1 scoring contract. Gallery art loads lazily; result and hero portraits load eagerly.
 
 Optional WebMCP exposes `read_quiz_scene` and `select_quiz_answer`. It is feature-detected, shares UI actions, includes the complete scene context, and cleans up with AbortSignal. It does not silently complete the quiz.
 

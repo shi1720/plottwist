@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Plot Twist — Your life. Questionable casting.',
+  title: 'Plot Twist — Which character are you?',
   icons: { icon: '/favicon.svg' },
   description:
     'A personality quiz for the plot. Play everyday dilemmas, discover your original sitcom archetype, and find your cast chemistry. No sign-up. Your quiz answers stay in your browser.',
@@ -29,6 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         {children}
       </body>
     </html>

@@ -1,34 +1,34 @@
-'use client';
-import { useCallback, useEffect, useRef, useState } from 'react';
+"use client";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
   Check,
   RotateCcw,
   ShieldCheck,
-} from 'lucide-react';
-import { Progress } from '@/components/ui/progress';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { getPack, isPackId } from '@/lib/content/packs';
-import { encodeResult } from '@/lib/engine/sharing';
-import { parseSession, STORAGE_KEY } from '@/lib/engine/storage';
-import type { Answer, PackId } from '@/lib/engine/types';
-import { useQuizTools } from './webmcp';
+} from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { EPISODE_ARCS } from "@/lib/content/stories";
+import { getPack, isPackId } from "@/lib/content/packs";
+import { LOCAL_RESULT_KEY } from "@/lib/engine/result-context";
+import { encodeResult } from "@/lib/engine/sharing";
+import { parseSession, STORAGE_KEY } from "@/lib/engine/storage";
+import type { Answer, PackId } from "@/lib/engine/types";
+import { useQuizTools } from "./webmcp";
 export default function Quiz() {
-  const [packId, setPackId] = useState<PackId>('pilot');
+  const [packId, setPackId] = useState<PackId>("pilot");
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [cursor, setCursor] = useState(0);
   const [ready, setReady] = useState(false);
   const [storageOk, setStorageOk] = useState(true);
   const [resume, setResume] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    const id = new URLSearchParams(location.search).get('pack') ?? 'pilot';
+    const id = new URLSearchParams(location.search).get("pack") ?? "pilot";
     if (!isPackId(id)) {
-      setError(
-        'That episode is not in this season. Choose one of our three episodes.',
-      );
+      setError("Choose one of the three available quizzes to continue.");
       setReady(true);
       return;
     }
@@ -56,12 +56,12 @@ export default function Quiz() {
         setResume(false);
       }
     }
-    window.addEventListener('storage', onStorage);
-    return () => window.removeEventListener('storage', onStorage);
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
   }, [packId]);
   const pack = getPack(packId),
     scene = pack.scenes[cursor],
-    selected = answers.find((a) => a.sceneId === scene.id)?.choiceId ?? '';
+    selected = answers.find((a) => a.sceneId === scene.id)?.choiceId ?? "";
   useEffect(() => {
     if (!ready || error) return;
     try {
@@ -73,6 +73,7 @@ export default function Quiz() {
           answers,
           cursor,
           updatedAt: Date.now(),
+          revision: crypto.randomUUID(),
         }),
       );
     } catch {
@@ -82,7 +83,7 @@ export default function Quiz() {
   const choose = useCallback(
     (choiceId: string) => {
       if (!scene.choices.some((c) => c.id === choiceId))
-        throw new Error('Unknown choice for the current scene');
+        throw new Error("Unknown choice for the current scene");
       setAnswers((previous) => {
         const next = [...previous];
         next[cursor] = { sceneId: scene.id, choiceId };
@@ -91,12 +92,42 @@ export default function Quiz() {
     },
     [scene, cursor],
   );
+  const actIndex = Math.floor(cursor / 4);
+  const arc = EPISODE_ARCS[packId][actIndex];
+  const reaction = scene.choices.find((c) => c.id === selected)?.reaction;
   const next = useCallback(() => {
     if (!selected) return;
     if (cursor === pack.scenes.length - 1) {
-      location.assign(
-        `/result?r=${encodeURIComponent(encodeResult(packId, answers))}`,
-      );
+      const token = encodeResult(packId, answers);
+      let fragment = "";
+      try {
+        const nonce = crypto.randomUUID();
+        const revision = crypto.randomUUID();
+        // Persist the exact completed result before linking its tab-local context.
+        localStorage.setItem(
+          `${STORAGE_KEY}.${packId}`,
+          JSON.stringify({
+            version: 1,
+            packId,
+            answers,
+            cursor,
+            updatedAt: Date.now(),
+            revision,
+          }),
+        );
+        sessionStorage.setItem(
+          `${LOCAL_RESULT_KEY}.${packId}`,
+          JSON.stringify({
+            token,
+            nonce,
+            revision,
+          }),
+        );
+        fragment = `#local=${nonce}`;
+      } catch {
+        /* The public summary remains usable when storage is blocked. */
+      }
+      location.assign(`/result?r=${encodeURIComponent(token)}${fragment}`);
     } else {
       setCursor((c) => c + 1);
       setResume(false);
@@ -120,15 +151,15 @@ export default function Quiz() {
   }
   if (!ready)
     return (
-      <main className="center-page">
-        <p role="status">Finding your scene…</p>
+      <main id="main-content" className="center-page">
+        <p role="status">Loading your quiz…</p>
       </main>
     );
   if (error)
     return (
-      <main className="center-page">
-        <p className="eyebrow">LOST EPISODE</p>
-        <h1>That plot went missing.</h1>
+      <main id="main-content" className="center-page">
+        <p className="eyebrow">Quiz unavailable</p>
+        <h1>This quiz could not be found.</h1>
         <p>{error}</p>
         <a className="primary-button" href="/#episodes">
           Choose an episode <ArrowRight size={20} />
@@ -136,14 +167,14 @@ export default function Quiz() {
       </main>
     );
   return (
-    <main className="quiz-page">
+    <main id="main-content" className="quiz-page">
       <div className="quiz-topline">
         <a href="/#episodes">
           <ArrowLeft size={17} /> All episodes
         </a>
         <span>
-          EPISODE {['pilot', 'office', 'friends'].indexOf(packId) + 1} /{' '}
-          {pack.title.toUpperCase()}
+          Quiz {["pilot", "office", "friends"].indexOf(packId) + 1} /{" "}
+          {pack.title}
         </span>
         <button
           className="icon-text"
@@ -155,42 +186,56 @@ export default function Quiz() {
       </div>
       <div className="quiz-layout">
         <aside className={`episode-sidebar ${pack.color}`}>
-          <div className="eyebrow">YOUR CURRENT STORY</div>
+          <div className="eyebrow">Your quiz</div>
           <h2>{pack.title}</h2>
           <p>{pack.subtitle}</p>
-          <div className="sidebar-symbol">
-            {packId === 'pilot' ? '✳' : packId === 'office' ? '↗' : '✺'}
-          </div>
+          <ol className="act-list" aria-label="Episode story arc">
+            {EPISODE_ARCS[packId].map((act, i) => (
+              <li
+                key={act.title}
+                aria-current={i === actIndex ? "step" : undefined}
+                className={i < actIndex ? "act-complete" : ""}
+              >
+                <span>{i < actIndex ? <Check size={16} /> : `0${i + 1}`}</span>
+                <div>
+                  <small>ACT {i + 1}</small>
+                  <strong>{act.title}</strong>
+                </div>
+              </li>
+            ))}
+          </ol>
           <div className="sidebar-note">
-            There are no right answers.
-            <br />
-            Only interesting character development.
+            Choose the answer closest to what you would do. You can change it
+            later.
           </div>
           <div className="save-note">
             <ShieldCheck size={16} />
             {storageOk
-              ? 'Saved on this device'
-              : 'Playing without device storage'}
+              ? "Saved on this device"
+              : "Playing without device storage"}
           </div>
         </aside>
         <section className="scene-panel" aria-label="Quiz scene">
           <div className="progress-label">
-            <span>SCENE {String(cursor + 1).padStart(2, '0')}</span>
             <span>
-              {cursor + 1} of {pack.scenes.length}
+              Question {cursor + 1} of {pack.scenes.length}
             </span>
+            <span>{arc.title}</span>
           </div>
           <Progress
-            value={((cursor + 1) / pack.scenes.length) * 100}
-            aria-label="Episode progress"
+            value={(answers.length / pack.scenes.length) * 100}
+            aria-label="Questions answered"
           />
           {resume && (
             <p className="resume-note" role="status">
-              Welcome back. Your episode is right where you left it.
+              Your saved answers are loaded. Continue or use Previous to review
+              them.
             </p>
           )}
           <div className="scene-heading">
-            <p className="eyebrow">{scene.setting}</p>
+            <p className="eyebrow">
+              {scene.setting.charAt(0) + scene.setting.slice(1).toLowerCase()}
+            </p>
             <h1 ref={heading} tabIndex={-1}>
               {scene.title}
             </h1>
@@ -205,7 +250,7 @@ export default function Quiz() {
             {scene.choices.map((choice, i) => (
               <label
                 key={choice.id}
-                className={`choice ${selected === choice.id ? 'chosen' : ''}`}
+                className={`choice ${selected === choice.id ? "chosen" : ""}`}
               >
                 <RadioGroupItem value={choice.id} className="choice-radio" />
                 <span className="choice-letter" aria-hidden="true">
@@ -236,13 +281,21 @@ export default function Quiz() {
               onClick={next}
             >
               {cursor === pack.scenes.length - 1
-                ? 'Reveal my character'
-                : 'Next scene'}
+                ? "See my character"
+                : "Next question"}
               <ArrowRight size={20} />
             </button>
           </div>
+          <div
+            className={`director-reaction ${reaction ? "has-reaction" : ""}`}
+            role="status"
+            aria-live="polite"
+          >
+            <span>{reaction ? "Aside" : ""}</span>
+            <p>{reaction ?? ""}</p>
+          </div>
           <p className="scene-tip">
-            Go with your first instinct. You can always change your answer.
+            Answers are saved in this browser when storage is available.
           </p>
         </section>
       </div>

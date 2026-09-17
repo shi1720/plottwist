@@ -14,11 +14,13 @@ import {
 export default function Chemistry() {
   const [a, setA] = useState('1001'),
     [b, setB] = useState('0110'),
-    [message, setMessage] = useState('');
+    [message, setMessage] = useState(''),
+    [ready, setReady] = useState(false);
   useEffect(() => {
     const p = new URLSearchParams(location.search);
     if (CHARACTERS.some((c) => c.code === p.get('a'))) setA(p.get('a')!);
     if (CHARACTERS.some((c) => c.code === p.get('b'))) setB(p.get('b')!);
+    setReady(true);
   }, []);
   const result = compareCharacters(a, b);
   const items = CHARACTERS.map((c) => ({ value: c.code, label: c.name }));
@@ -30,28 +32,23 @@ export default function Chemistry() {
     }
   }
   return (
-    <main className="chemistry-page">
+    <main id="main-content" className="chemistry-page">
       <div className="page-intro">
-        <p className="eyebrow">THE CROSSOVER EPISODE</p>
-        <h1>
-          Good friends.
-          <br />
-          <em>Excellent television.</em>
-        </h1>
+        <p className="eyebrow">Compare characters</p>
+        <h1>How would these two get along?</h1>
         <p>
-          Pick two characters. Let the fictional casting department do its
-          thing.
-          <br />
-          No compatibility scores. Just a very plausible subplot.
+          Choose two characters to compare their four tendencies. This is a
+          fictional pairing, not a prediction about your relationships.
         </p>
       </div>
       <div className="chemistry-picker">
         {[result.left, result.right].map((c, i) => (
           <section key={i} className={`co-star ${c.color}`}>
             <p className="eyebrow">
-              {i === 0 ? 'CHARACTER ONE' : 'CHARACTER TWO'}
+              {i === 0 ? 'First character' : 'Second character'}
             </p>
             <Select
+              disabled={!ready}
               items={items}
               value={i === 0 ? a : b}
               onValueChange={(value) => change(i === 0 ? 'a' : 'b', value)}
@@ -70,7 +67,7 @@ export default function Chemistry() {
                 ))}
               </SelectContent>
             </Select>
-            <CharacterArt family={c.family} />
+            <CharacterArt code={c.code} />
             <p>{c.tagline}</p>
           </section>
         ))}
@@ -81,40 +78,42 @@ export default function Chemistry() {
       <div className="mixer-actions">
         <button
           className="secondary-button"
+          disabled={!ready}
           onClick={() => {
             const array = crypto.getRandomValues(new Uint8Array(2));
             setA(CHARACTERS[array[0] % 16].code);
             setB(CHARACTERS[array[1] % 16].code);
-            setMessage('A new double act has entered the chat.');
+            setMessage('Two new characters selected.');
           }}
         >
           <Shuffle size={17} /> Surprise me
         </button>
         <button
           className="secondary-button"
+          disabled={!ready}
           onClick={async () => {
             const url = `${location.origin}/chemistry?a=${a}&b=${b}`;
             try {
               await navigator.clipboard.writeText(url);
-              setMessage('Your crossover link is copied.');
+              setMessage('Link copied.');
             } catch {
               setMessage(`Copy this link: ${url}`);
             }
           }}
         >
-          <Copy size={17} /> Share this duo
+          <Copy size={17} /> Copy comparison link
         </button>
       </div>
       <p className="feedback" role="status">
         {message}
       </p>
       <section className="chemistry-verdict" aria-live="polite">
-        <p className="eyebrow">YOUR SITCOM DYNAMIC</p>
+        <p className="eyebrow">The pairing</p>
         <h2>{result.title}</h2>
         <p className="premise">{result.premise}</p>
         <div className="shared-count">
-          <span>{result.shared} shared instincts</span>
-          <span>{result.differences} plot opportunities</span>
+          <span>{result.shared} shared tendencies</span>
+          <span>{result.differences} different tendencies</span>
         </div>
         <div className="duo-tips">
           {result.tips.map((tip, i) => (
@@ -132,7 +131,7 @@ export default function Chemistry() {
       <div className="cast-cta">
         <h2>Still figuring out your part?</h2>
         <a href="/play?pack=pilot" className="primary-button">
-          Find my character <ArrowRight size={20} />
+          Take the quiz <ArrowRight size={20} />
         </a>
       </div>
     </main>

@@ -1,13 +1,15 @@
-import { getPack, isPackId } from '../content/packs';
-import { scoreAnswers } from './scoring';
-import type { Answer, PackId } from './types';
-export const STORAGE_KEY = 'plottwist.session.v1';
+import { getPack, isPackId } from "../content/packs";
+import { scoreAnswers } from "./scoring";
+import type { Answer, PackId } from "./types";
+export const STORAGE_KEY = "plottwist.session.v1";
 export interface Session {
   version: 1;
   packId: PackId;
   answers: Answer[];
   cursor: number;
   updatedAt: number;
+  /** Optional for compatibility with earlier saved episodes; never carries answers. */
+  revision?: string;
 }
 export function parseSession(raw: string | null): Session | null {
   try {
