@@ -6,7 +6,7 @@
 
 Twelve everyday questions. Sixteen original characters. A personality quiz for fun.
 
-[Play Plot Twist](https://plottwist.sg127977958.chatgpt.site) · [Meet the cast](https://plottwist.sg127977958.chatgpt.site/cast) · [Architecture](docs/ARCHITECTURE.md) · [Engineering evaluations](evaluation/README.md)
+[Play Plot Twist](https://plottwist-shi1720.web.app) · [Meet the cast](https://plottwist-shi1720.web.app/cast) · [Architecture](docs/ARCHITECTURE.md) · [Engineering evaluations](evaluation/README.md)
 
 [![Quality](https://github.com/shi1720/plottwist/actions/workflows/ci.yml/badge.svg)](https://github.com/shi1720/plottwist/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)
@@ -119,3 +119,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing scoring or content versi
 Created by **Shivam Gupta**, with AI-assisted implementation, independent agent review, and original AI-generated character art. The development process and limitations are documented rather than presented as years of production history.
 
 MIT licensed. Third-party dependencies retain their own licenses. Generated artwork has no third-party stock attribution requirement; applicable rights in the supplied artwork are offered under the repository license without a claim of exclusivity.
+
+## Firebase deployment
+
+See [Firebase deployment and verification](docs/FIREBASE.md) for the production architecture, commands, and migration considerations.

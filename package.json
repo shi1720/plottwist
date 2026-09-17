@@ -17,7 +17,9 @@
     "test:e2e": "playwright test",
     "check": "npm run typecheck && npm run lint && npm run test:coverage",
     "benchmark": "node --import=tsx scripts/benchmark.ts",
-    "eval:verify": "python3 evaluation/runner.py verify-all"
+    "eval:verify": "python3 evaluation/runner.py verify-all",
+    "build:firebase": "FIREBASE_BUILD=1 vinext build",
+    "start:firebase": "vinext start"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

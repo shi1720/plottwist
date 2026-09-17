@@ -52,6 +52,10 @@ Vinext is beta. Keep React's server/client packages in lockstep, upgrade matchin
 
 ## Live release
 
-Public application: https://plottwist.sg127977958.chatgpt.site
+Public application: https://plottwist-shi1720.web.app
 
 The hosting service returned this final canonical address at deployment. Use the deployed address rather than the initial registration preview URL.
+
+## Current Firebase deployment
+
+The public app now uses Firebase Hosting and the native Vinext Node runtime on Cloud Run. See [Firebase deployment](FIREBASE.md) for the production commands. The Worker instructions above remain an alternative deployment path.

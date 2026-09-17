@@ -61,3 +61,5 @@ venv/
 htmlcov/
 node_modules/
 *.log
+
+/.firebase/

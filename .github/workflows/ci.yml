@@ -40,6 +40,20 @@ jobs:
       - run: npm run test:e2e
         env:
           PLAYWRIGHT_BASE_URL: http://localhost:3001
+      - run: npm run build:firebase
+      - name: Start Firebase Node runtime
+        run: PORT=3211 npm run start:firebase > /tmp/plottwist-node.log 2>&1 &
+      - name: Wait for Node health
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:3211/api/health; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/plottwist-node.log
+          exit 1
+      - run: npm run test:e2e
+        env:
+          PLAYWRIGHT_BASE_URL: http://localhost:3211
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
